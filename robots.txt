@@ -1,0 +1,5 @@
+User-agent: *
+
+Allow: /
+
+Sitemap: https://rastamozhka-calc.github.io/sitemap.xml
