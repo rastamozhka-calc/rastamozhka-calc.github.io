@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
-<title>Калькулятор растаможки авто — расчет стоимости таможенного оформления автомобиля</title>
+<title>Калькулятор растаможки авто в России — расчет стоимости таможенного оформления автомобиля</title>
 
 <meta name="description"
 content="Онлайн-калькулятор растаможки автомобиля. Рассчитайте ориентировочную стоимость таможенных платежей при ввозе автомобиля с учетом возраста, объема двигателя и стоимости машины.">
@@ -254,45 +254,45 @@ Rastamozhka<span>Calc</span>
 
 <form id="importCalculator">
 
-
-
 <div class="form-grid">
 
 
+<!-- Страна покупки -->
+
 <div class="field">
 
-<label>
-Страна оформления
+<label for="sourceCountry">
+Страна покупки автомобиля
 </label>
 
-<select id="country">
+<select id="sourceCountry">
 
-<option value="kz">
-🇰🇿 Казахстан
-</option>
-
-<option value="ru">
-🇷🇺 Россия
-</option>
-
-<option value="by">
-🇧🇾 Беларусь
-</option>
-
-<option value="de">
-🇩🇪 Германия
-</option>
-
-<option value="pl">
-🇵🇱 Польша
-</option>
-
-<option value="us">
+<option value="usa">
 🇺🇸 США
 </option>
 
-<option value="ae">
+<option value="germany">
+🇩🇪 Германия
+</option>
+
+<option value="china">
+🇨🇳 Китай
+</option>
+
+<option value="korea">
+🇰🇷 Южная Корея
+</option>
+
+<option value="japan">
+🇯🇵 Япония
+</option>
+
+<option value="uae">
 🇦🇪 ОАЭ
+</option>
+
+<option value="other">
+Другая страна
 </option>
 
 </select>
@@ -301,114 +301,261 @@ Rastamozhka<span>Calc</span>
 
 
 
+<!-- Кто ввозит -->
+
 <div class="field">
 
-<label>
-Кто ввозит
+<label for="owner">
+
+Кто оформляет автомобиль
+
 </label>
 
 
 <select id="owner">
 
 <option value="person">
+
 Физическое лицо
+
 </option>
 
+
 <option value="company">
-Компания
+
+Юридическое лицо
+
 </option>
 
 
 </select>
 
-
 </div>
 
 
 
+<!-- Стоимость -->
+
 <div class="field">
 
-<label>
+<label for="carPrice">
+
 Стоимость автомобиля
+
 </label>
 
-<input 
-id="price"
+
+<input
+id="carPrice"
 type="number"
-placeholder="25000">
+placeholder="Например: 25000"
+min="0">
+
 
 </div>
 
 
 
+<!-- Валюта -->
+
 <div class="field">
 
-<label>
-Валюта
+<label for="currency">
+
+Валюта стоимости
+
 </label>
+
 
 <select id="currency">
 
-<option>
-EUR
+
+<option value="EUR">
+
+Евро €
+
 </option>
 
-<option>
-USD
+
+<option value="USD">
+
+Доллары $
+
 </option>
+
+
+<option value="RUB">
+
+Рубли ₽
+
+</option>
+
 
 </select>
+
 
 </div>
 
 
 
+<!-- Доставка -->
+
 <div class="field">
 
-<label>
-Год выпуска
+<label for="delivery">
+
+Расходы на доставку до России
+
+</label>
+
+
+<input
+id="delivery"
+type="number"
+placeholder="Например: 3000">
+
+
+</div>
+
+
+
+<!-- Год -->
+
+<div class="field">
+
+<label for="year">
+
+Год выпуска автомобиля
+
 </label>
 
 
 <input
 id="year"
 type="number"
-placeholder="2021">
+placeholder="2021"
+min="1900"
+max="2026">
 
 
 </div>
 
 
 
+<!-- Месяц выпуска -->
 
 <div class="field">
 
-<label>
-Объем двигателя см³
+<label for="month">
+
+Месяц выпуска
+
+</label>
+
+
+<select id="month">
+
+
+<option value="1">
+Январь
+</option>
+
+<option value="2">
+Февраль
+</option>
+
+<option value="3">
+Март
+</option>
+
+<option value="4">
+Апрель
+</option>
+
+<option value="5">
+Май
+</option>
+
+<option value="6">
+Июнь
+</option>
+
+<option value="7">
+Июль
+</option>
+
+<option value="8">
+Август
+</option>
+
+<option value="9">
+Сентябрь
+</option>
+
+<option value="10">
+Октябрь
+</option>
+
+<option value="11">
+Ноябрь
+</option>
+
+<option value="12">
+Декабрь
+</option>
+
+
+</select>
+
+</div>
+
+
+
+<!-- Двигатель -->
+
+<div class="field">
+
+<label for="engine">
+
+Объем двигателя
+
 </label>
 
 
 <input
 id="engine"
 type="number"
-placeholder="1998">
+placeholder="Например: 1998">
+
+<span>
+см³
+</span>
 
 
 </div>
 
 
 
+<!-- Мощность -->
+
 <div class="field">
 
-<label>
-Мощность л.с.
+<label for="power">
+
+Мощность двигателя
+
 </label>
 
 
 <input
 id="power"
 type="number"
-placeholder="150">
+placeholder="Например: 150">
+
+
+<span>
+л.с.
+</span>
 
 
 </div>
@@ -416,10 +563,14 @@ placeholder="150">
 
 
 
+<!-- Топливо -->
+
 <div class="field">
 
-<label>
-Топливо
+<label for="fuel">
+
+Тип двигателя
+
 </label>
 
 
@@ -427,22 +578,30 @@ placeholder="150">
 
 
 <option value="petrol">
+
 Бензин
+
 </option>
 
 
 <option value="diesel">
+
 Дизель
+
 </option>
 
 
 <option value="hybrid">
+
 Гибрид
+
 </option>
 
 
 <option value="electric">
-Электро
+
+Электромобиль
+
 </option>
 
 
@@ -452,29 +611,112 @@ placeholder="150">
 </div>
 
 
+
+<!-- Руль -->
+
+<div class="field">
+
+<label for="wheel">
+
+Расположение руля
+
+</label>
+
+
+<select id="wheel">
+
+
+<option value="left">
+
+Левый руль
+
+</option>
+
+
+<option value="right">
+
+Правый руль
+
+</option>
+
+
+</select>
+
+
 </div>
 
 
 
+<!-- Состояние -->
 
-<button type="button" id="calculateImport">
+<div class="field">
 
-Рассчитать
+<label for="condition">
+
+Состояние автомобиля
+
+</label>
+
+
+<select id="condition">
+
+
+<option value="used">
+
+Подержанный
+
+</option>
+
+
+<option value="new">
+
+Новый
+
+</option>
+
+
+</select>
+
+
+</div>
+
+
+
+</div>
+
+
+
+<div class="buttons">
+
+
+<button 
+type="button"
+id="calculate">
+
+Рассчитать растаможку
 
 </button>
+
+
+
+<button 
+type="reset">
+
+Очистить
+
+</button>
+
+
+</div>
 
 
 
 </form>
 
 
+<div id="result" class="result">
 
-
-<div 
-id="importResult"
-class="result">
-
-Введите данные автомобиля
+Введите данные автомобиля для расчета
 
 </div>
 
@@ -1626,256 +1868,255 @@ FAQ
 
 
 /*
-=====================================
-БАЗА СТРАН
-=====================================
+========================================
+КАЛЬКУЛЯТОР РАСТАМОЖКИ АВТО В РФ
+ФИЗИЧЕСКОЕ ЛИЦО
+========================================
 */
 
 
-const COUNTRIES = {
+const RF_RULES = {
 
 
-kz:{
+currencyRate: 100,
 
 
-name:"Казахстан",
-
-vat:12,
-
-
-privatePerson:{
-
-
-duty:true,
-
-recycle:true,
-
-excise:false
-
-
-},
-
-
-company:{
-
-
-duty:true,
-
-vat:true,
-
-recycle:true,
-
-excise:true
-
-
-},
-
-
-
-engineRates:[
-
+// Таможенный сбор
+customsFee:[
 
 {
-max:1000,
-rate:3
+max:200000,
+fee:775
 },
 
-
 {
-max:1500,
-rate:3.2
+max:450000,
+fee:1550
 },
 
-
 {
-max:1800,
-rate:3.5
+max:1200000,
+fee:3100
 },
 
-
 {
-max:2300,
-rate:4.8
+max:2700000,
+fee:8530
 },
 
-
 {
-max:3000,
-rate:5
+max:4200000,
+fee:12000
 },
 
-
 {
-max:null,
-rate:5.7
+max:5500000,
+fee:15500
 }
-
 
 ]
-
-
-},
-
-
-
-ru:{
-
-
-name:"Россия",
-
-vat:20,
-
-
-privatePerson:{
-
-
-duty:true,
-
-recycle:true,
-
-excise:false
-
-
-},
-
-
-company:{
-
-
-duty:true,
-
-vat:true,
-
-recycle:true,
-
-excise:true
-
-
-},
-
-
-
-engineRates:[
-
-
-{
-max:1000,
-rate:1.5
-},
-
-
-{
-max:1500,
-rate:1.7
-},
-
-
-{
-max:1800,
-rate:2.5
-},
-
-
-{
-max:2300,
-rate:2.7
-},
-
-
-{
-max:3000,
-rate:3
-},
-
-
-{
-max:null,
-rate:3.6
-}
-
-
-]
-
-
-},
-
-
-
-de:{
-
-
-name:"Германия",
-
-vat:19,
-
-
-privatePerson:{
-
-
-duty:true,
-
-vat:true
-
-},
-
-
-company:{
-
-
-duty:true,
-
-vat:true
-
-}
-
-
-}
-
 
 };
 
 
 
+
+
 /*
-=====================================
-ПОШЛИНА
-=====================================
+========================================
+Возраст автомобиля
+========================================
 */
 
 
-function calculateDuty(engine,rates){
+function getAge(year){
 
 
-if(!rates)
-return 0;
+let current =
+new Date().getFullYear();
 
 
-for(let r of rates){
-
-
-if(r.max===null || engine<=r.max){
-
-
-return engine*r.rate;
+return current-year;
 
 
 }
 
-
-}
-
-
-return 0;
-
-
-}
 
 
 
 /*
-=====================================
+========================================
+Пошлина физлица
+ЕАЭС единая ставка
+========================================
+*/
+
+
+function calculateDuty(engine, age){
+
+
+let rate=0;
+
+
+
+if(age <= 3){
+
+
+if(engine<=1000)
+rate=3;
+
+
+else if(engine<=1500)
+rate=3.2;
+
+
+else if(engine<=1800)
+rate=3.5;
+
+
+else if(engine<=2300)
+rate=4.8;
+
+
+else if(engine<=3000)
+rate=5;
+
+
+else
+rate=5.7;
+
+
+
+return engine*rate;
+
+
+}
+
+
+
+
+
+// автомобили старше 3 лет
+
+if(engine<=1000)
+rate=1.5;
+
+
+else if(engine<=1500)
+rate=1.7;
+
+
+else if(engine<=1800)
+rate=2.5;
+
+
+else if(engine<=2300)
+rate=2.7;
+
+
+else if(engine<=3000)
+rate=3;
+
+
+else
+rate=3.6;
+
+
+
+return engine*rate;
+
+
+
+}
+
+
+
+
+/*
+========================================
+Таможенный сбор
+========================================
+*/
+
+
+function calculateCustomsFee(price){
+
+
+
+for(let item of RF_RULES.customsFee){
+
+
+if(price<=item.max){
+
+
+return item.fee;
+
+
+}
+
+
+}
+
+
+return 20500;
+
+
+}
+
+
+
+
+
+
+/*
+========================================
+Утильсбор
+========================================
+*/
+
+
+function calculateRecycle(engine,age){
+
+
+/*
+Базовая структура.
+Коэффициенты расширяются
+под актуальную таблицу РФ.
+*/
+
+
+let base=3400;
+
+
+
+if(age>3){
+
+base=5200;
+
+}
+
+
+
+if(engine>3000){
+
+base*=2;
+
+}
+
+
+
+return base;
+
+
+}
+
+
+
+
+/*
+========================================
 ОСНОВНОЙ РАСЧЕТ
-=====================================
+========================================
 */
 
 
@@ -1883,33 +2124,16 @@ function calculateImport(){
 
 
 
-let country =
-COUNTRIES[
-document.getElementById("country").value
-];
-
-
-
-let owner =
-document.getElementById("owner").value;
-
-
-
-let rules =
-country[owner];
-
-
-
 let price =
 Number(
-document.getElementById("price").value
+document.getElementById("carPrice").value
 );
 
 
 
-let engine =
+let delivery =
 Number(
-document.getElementById("engine").value
+document.getElementById("delivery").value
 );
 
 
@@ -1921,12 +2145,24 @@ document.getElementById("year").value
 
 
 
-if(!price || !engine || !year){
+let engine =
+Number(
+document.getElementById("engine").value
+);
 
 
-document.getElementById("importResult").innerHTML=
 
-"Заполните стоимость, объем двигателя и год выпуска";
+
+if(
+!price ||
+!year ||
+!engine
+){
+
+
+document.getElementById("result").innerHTML=
+
+"Заполните стоимость автомобиля, год выпуска и объем двигателя";
 
 
 return;
@@ -1936,93 +2172,94 @@ return;
 
 
 
-let duty=0;
+let age =
+getAge(year);
 
 
 
-if(rules.duty){
+let customsValue =
+price+delivery;
 
 
-duty=
+
+let duty =
 calculateDuty(
 engine,
-country.engineRates
+age
 );
 
 
-}
+
+let customsFee =
+calculateCustomsFee(
+customsValue
+);
 
 
 
-let vat=0;
-
-
-
-if(rules.vat){
-
-
-vat=
-(price+duty)
-*
-(country.vat/100);
-
-
-}
-
-
-
-let recycle=0;
-
-
-
-if(rules.recycle){
-
-
-/*
-временно.
-будет заменено реальными таблицами
-*/
-
-
-recycle=500;
-
-
-}
+let recycle =
+calculateRecycle(
+engine,
+age
+);
 
 
 
 let total =
-duty+
-vat+
+
+duty
++
+customsFee
++
 recycle;
 
 
 
-document.getElementById("importResult").innerHTML=
-
+document.getElementById("result").innerHTML=
 
 `
 
 <h3>
-Расчет для ${country.name}
+Расчет растаможки автомобиля в России
 </h3>
 
 
 <p>
+Стоимость автомобиля:
+<strong>${price.toLocaleString()} €</strong>
+</p>
+
+
+<p>
+Доставка:
+<strong>${delivery.toLocaleString()} €</strong>
+</p>
+
+
+<hr>
+
+
+<p>
+Таможенная стоимость:
+<strong>${customsValue.toLocaleString()} €</strong>
+</p>
+
+
+<p>
 Таможенная пошлина:
-<strong>${duty.toFixed(2)} €</strong>
+<strong>${duty.toLocaleString()} €</strong>
 </p>
 
 
 <p>
-НДС:
-<strong>${vat.toFixed(2)} €</strong>
+Таможенный сбор:
+<strong>${customsFee.toLocaleString()} ₽</strong>
 </p>
 
 
 <p>
-Утильсбор:
-<strong>${recycle.toFixed(2)} €</strong>
+Утилизационный сбор:
+<strong>${recycle.toLocaleString()} ₽</strong>
 </p>
 
 
@@ -2030,25 +2267,23 @@ document.getElementById("importResult").innerHTML=
 
 
 <h2>
-Итого:
-${total.toFixed(2)} €
+Итого расходов:
+${total.toLocaleString()}
 </h2>
 
 
 <p>
-Расчет предварительный. Итоговые платежи зависят от актуальных ставок и документов автомобиля.
+Расчет является предварительным. Перед оформлением необходимо проверить действующие ставки.
 </p>
 
 `;
-
-
 
 }
 
 
 
 document
-.getElementById("calculateImport")
+.getElementById("calculate")
 .addEventListener(
 "click",
 calculateImport
