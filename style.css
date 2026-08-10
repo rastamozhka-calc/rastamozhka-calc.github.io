@@ -98,6 +98,8 @@ h1, h2, h3 {
 ====================================================== */
 
 
+/* Desktop: header sticky, nav shown inline, hamburger hidden */
+
 .header {
     position: sticky;
     top: 0;
@@ -127,8 +129,23 @@ h1, h2, h3 {
 }
 
 
+.logo {
+    font-family: var(--font-display);
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+}
+
+
+.logo span {
+    color: var(--navy);
+    font-weight: 600;
+}
+
+
 .menu-toggle {
-    display: inline-flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -157,44 +174,20 @@ h1, h2, h3 {
 
 
 .site-nav {
-    position: absolute;
-    top: calc(100% + 8px);
-    right: 0;
-    z-index: 30;
-    display: none;
-    min-width: 240px;
-    background: #fff;
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    box-shadow: 0 14px 30px rgba(19, 26, 38, .12);
-    padding: 8px;
-}
-
-
-.site-nav.is-open {
+    position: static;
     display: block;
-}
-
-
-.logo {
-    font-family: var(--font-display);
-    font-size: 19px;
-    font-weight: 700;
-    color: var(--ink);
-    letter-spacing: -0.01em;
-}
-
-
-.logo span {
-    color: var(--navy);
-    font-weight: 600;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    padding: 0;
+    min-width: 0;
 }
 
 
 .site-nav ul {
     display: flex;
-    flex-direction: column;
-    gap: 2px;
+    flex-direction: row;
+    gap: 26px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -206,14 +199,61 @@ h1, h2, h3 {
     font-size: 14.5px;
     font-weight: 600;
     color: var(--ink-soft);
-    padding: 11px 14px;
+    padding: 0;
     border-radius: var(--radius-sm);
 }
 
 
 .site-nav a:hover {
     color: var(--navy);
-    background: var(--paper);
+    background: transparent;
+}
+
+
+/* Mobile: header not fixed, nav collapses behind hamburger, one line with logo */
+
+@media (max-width: 720px) {
+
+    .header {
+        position: static;
+        backdrop-filter: none;
+    }
+
+    .menu-toggle {
+        display: inline-flex;
+    }
+
+    .site-nav {
+        position: absolute;
+        top: calc(100% + 8px);
+        right: 0;
+        z-index: 30;
+        display: none;
+        min-width: 240px;
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        box-shadow: 0 14px 30px rgba(19, 26, 38, .12);
+        padding: 8px;
+    }
+
+    .site-nav.is-open {
+        display: block;
+    }
+
+    .site-nav ul {
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    .site-nav a {
+        padding: 11px 14px;
+    }
+
+    .site-nav a:hover {
+        background: var(--paper);
+    }
+
 }
 
 
@@ -1102,13 +1142,6 @@ details p {
 
 
 @media (max-width: 620px) {
-
-    .header-row {
-        height: auto;
-        flex-direction: column;
-        gap: 12px;
-        padding: 14px 0;
-    }
 
     .form-grid,
     .line-cards {
