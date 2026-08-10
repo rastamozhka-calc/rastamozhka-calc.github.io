@@ -67,6 +67,19 @@ p {
 }
 
 
+p a {
+    color: var(--navy);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    font-weight: 600;
+}
+
+
+p a:hover {
+    color: var(--navy-deep);
+}
+
+
 h1, h2, h3 {
     font-family: var(--font-display);
     line-height: 1.15;

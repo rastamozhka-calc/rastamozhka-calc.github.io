@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>О проекте — Rastamozhka Calc, калькулятор растаможки авто</title>
+
+<meta name="description" content="Как устроен калькулятор растаможки автомобиля Rastamozhka Calc: на какие нормативные акты и ставки он опирается, как часто обновляется и какие у него ограничения.">
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://rastamozhka-calc.github.io/about/">
+<meta name="theme-color" content="#12305c">
+
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/style.css">
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"AboutPage",
+ "name":"О проекте Rastamozhka Calc",
+ "url":"https://rastamozhka-calc.github.io/about/",
+ "inLanguage":"ru",
+ "isPartOf":{ "@type":"WebSite", "name":"Rastamozhka Calc", "url":"https://rastamozhka-calc.github.io/" }
+}
+</script>
+
+</head>
+<body>
+
+<header class="header">
+  <div class="container header-row">
+    <a href="/" class="logo">Растаможка<span>·Calc</span></a>
+    <button type="button" class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="siteNav">
+      <span></span><span></span><span></span>
+      <span class="sr-only">Меню</span>
+    </button>
+    <nav id="siteNav" class="site-nav">
+      <ul>
+        <li><a href="/#calculator">Калькулятор</a></li>
+        <li><a href="/#breakdown">Из чего складывается цена</a></li>
+        <li><a href="/#rates">Ставки 2026</a></li>
+        <li><a href="/#faq">Вопросы</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero" style="padding-bottom: 20px;">
+  <div class="container">
+    <p class="eyebrow">О проекте</p>
+    <h1>Как устроен Rastamozhka Calc</h1>
+    <p class="hero-text">
+      Rastamozhka Calc — независимый калькулятор для предварительной оценки стоимости
+      растаможки автомобиля в России. Ниже — из чего он собран, на какие источники опирается
+      и почему его можно использовать как рабочий ориентир перед покупкой машины за границей.
+    </p>
+  </div>
+</section>
+
+<section class="methodology">
+  <div class="container" style="max-width: 820px;">
+
+    <h2>Зачем появился этот калькулятор</h2>
+    <p>
+      Большинство калькуляторов растаможки показывают только итоговую сумму, не объясняя, из
+      чего она получилась. При проверке нескольких таких сервисов выяснилось, что часть из них
+      считает пошлину по устаревшим ставкам или путает возрастные категории автомобиля — из-за
+      этого итог может отличаться от реального в разы. Rastamozhka Calc делает две вещи иначе:
+      показывает формулу рядом с каждой суммой и явно предупреждает, если автомобиль не попадает
+      под льготную ставку утилизационного сбора.
+    </p>
+
+    <h2>На чём основан расчёт</h2>
+    <p>
+      В основе калькулятора — открытые нормативные документы: единые ставки таможенных пошлин
+      для физических лиц из Решения Совета ЕЭК от 20.12.2017 № 107, ставки таможенного сбора
+      за таможенные операции из постановлений Правительства РФ, а также действующие коэффициенты
+      утилизационного сбора и ставки акциза по мощности двигателя для юридических лиц.
+    </p>
+    <p>
+      Актуальные ставки и официальные формулы можно проверить напрямую на сайте
+      <a href="https://customs.gov.ru/" target="_blank" rel="noopener noreferrer">Федеральной таможенной службы России</a> —
+      это первоисточник, на который стоит ориентироваться, если сумма имеет значение для
+      конкретной сделки. Мы сверяем расчёт с этими данными при каждом обновлении ставок.
+    </p>
+
+    <h2>Как часто обновляются данные</h2>
+    <p>
+      Ставки таможенного сбора, утилизационного сбора и акциза периодически пересматриваются
+      государством, иногда — несколько раз в год. Последняя сверка таблиц в калькуляторе
+      проведена в январе 2026 года, дата ближайшего обновления не фиксирована заранее: мы
+      актуализируем расчёт при появлении новых нормативных актов.
+    </p>
+
+    <h2>Для кого этот сайт</h2>
+    <p>
+      Сервис рассчитан на людей, которые планируют купить автомобиль за границей — в Китае,
+      Корее, Японии, Германии, США и других странах — и хотят понять порядок расходов на
+      растаможку до того, как вносить предоплату за машину. Отдельно предусмотрен расчёт для
+      юридических лиц и ИП, у которых состав платежей отличается от физических лиц.
+    </p>
+
+    <h2>Что калькулятор не умеет</h2>
+    <p>
+      Это не официальный расчёт и не юридическая консультация. Калькулятор не учитывает
+      индивидуальные особенности конкретной декларации, региональные нюансы оформления и
+      точный курс валюты на день пересечения границы — эти данные стоит уточнять у таможенного
+      брокера или на <a href="https://customs.gov.ru/" target="_blank" rel="noopener noreferrer">сайте ФТС России</a>
+      непосредственно перед сделкой. Условия использования и обработки данных подробно описаны
+      в <a href="/privacy/">политике конфиденциальности</a>.
+    </p>
+
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <a href="/" class="logo">Растаможка<span>·Calc</span></a>
+      <p>Независимый калькулятор предварительной стоимости растаможки автомобиля в России.</p>
+    </div>
+    <div>
+      <h3>Растаможка по странам</h3>
+      <ul class="footer-countries">
+        <li><a href="/china/">Китай</a></li>
+        <li><a href="/yaponiya/">Япония</a></li>
+        <li><a href="/koreya/">Корея</a></li>
+        <li><a href="/gruziya/">Грузия</a></li>
+        <li><a href="/kazakhstan/">Казахстан</a></li>
+        <li><a href="/kirgiziya/">Киргизия</a></li>
+        <li><a href="/germaniya/">Германия</a></li>
+        <li><a href="/usa/">США</a></li>
+        <li><a href="/armeniya/">Армения</a></li>
+        <li><a href="/mongoliya/">Монголия</a></li>
+        <li><a href="/uzbekistan/">Узбекистан</a></li>
+        <li><a href="/tadzhikistan/">Таджикистан</a></li>
+        <li><a href="/oae/">ОАЭ</a></li>
+        <li><a href="/kyrgyzstan/">Кыргызстан</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Информация</h3>
+      <ul>
+        <li><a href="https://rastamozhka-calc.github.io/privacy/">Политика конфиденциальности</a></li>
+        <li><a href="https://rastamozhka-calc.github.io/about/">О проекте</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container copyright">
+    © 2026 Rastamozhka Calc. Расчёт носит справочный характер и не заменяет официальное
+    таможенное оформление.
+  </div>
+</footer>
+
+<script src="/script.js" defer></script>
+</body>
+</html>
