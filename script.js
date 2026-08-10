@@ -21,12 +21,12 @@
 
     // Курсы по умолчанию, если пользователь не поправил вручную
     const DEFAULT_RATES = {
-        CNY: 11.6,
+        CNY: 12.6,
         KRW: 0.062,
-        JPY: 0.52,
-        EUR: 95,
-        USD: 82,
-        AED: 22.5,
+        JPY: 0.62,
+        EUR: 105,
+        USD: 90,
+        AED: 24.5,
         RUB: 1
     };
 
@@ -338,6 +338,31 @@
     --------------------------------------------------- */
 
     document.addEventListener("DOMContentLoaded", function () {
+
+        const menuToggle = document.getElementById("menuToggle");
+        const siteNav = document.getElementById("siteNav");
+
+        if (menuToggle && siteNav) {
+
+            menuToggle.addEventListener("click", function () {
+                const open = siteNav.classList.toggle("is-open");
+                menuToggle.setAttribute("aria-expanded", open ? "true" : "false");
+            });
+
+            siteNav.querySelectorAll("a").forEach(function (link) {
+                link.addEventListener("click", function () {
+                    siteNav.classList.remove("is-open");
+                    menuToggle.setAttribute("aria-expanded", "false");
+                });
+            });
+
+            document.addEventListener("click", function (event) {
+                if (!siteNav.contains(event.target) && !menuToggle.contains(event.target)) {
+                    siteNav.classList.remove("is-open");
+                    menuToggle.setAttribute("aria-expanded", "false");
+                }
+            });
+        }
 
         const ownerSwitch = document.getElementById("ownerSwitch");
         const purposeRow = document.getElementById("purposeRow");
