@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Калькулятор растаможки авто из Китая в Россию</title>
+
+<meta name="description" content="Калькулятор растаможки авто из Китая: расчёт пошлины, таможенного сбора и утильсбора для Chery, Geely, Haval, Changan, BYD, Zeekr и других китайских марок по ставкам 2026 года.">
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<link rel="canonical" href="https://rastamozhka-calc.github.io/china/">
+<meta name="theme-color" content="#12305c">
+<meta name="author" content="Rastamozhka Calc">
+<meta name="application-name" content="Rastamozhka Calc">
+<meta name="format-detection" content="telephone=no">
+<link rel="alternate" hreflang="ru" href="https://rastamozhka-calc.github.io/china/">
+<link rel="alternate" hreflang="x-default" href="https://rastamozhka-calc.github.io/china/">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="Калькулятор растаможки авто из Китая в Россию">
+<meta property="og:description" content="Расчёт таможенных платежей при ввозе автомобиля из Китая: пошлина, сбор и утильсбор с пояснением каждой суммы.">
+<meta property="og:url" content="https://rastamozhka-calc.github.io/china/">
+<meta property="og:site_name" content="Rastamozhka Calc">
+<meta property="og:image" content="https://rastamozhka-calc.github.io/img/cover.jpg">
+
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/style.css">
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"WebPage",
+ "name":"Калькулятор растаможки авто из Китая в Россию",
+ "url":"https://rastamozhka-calc.github.io/china/",
+ "inLanguage":"ru",
+ "isPartOf":{ "@type":"WebSite", "name":"Rastamozhka Calc", "url":"https://rastamozhka-calc.github.io/" }
+}
+</script>
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"FAQPage",
+ "mainEntity":[
+  {
+   "@type":"Question",
+   "name":"Растаможка авто из Китая считается иначе, чем из других стран?",
+   "acceptedAnswer":{ "@type":"Answer", "text":"Формулы пошлины, таможенного сбора и утильсбора не зависят от страны покупки — только от возраста, объёма двигателя, мощности и стоимости автомобиля. Особенность Китая в другом: сюда чаще везут электромобили и подключаемые гибриды, для которых действуют отдельные правила утильсбора." }
+  },
+  {
+   "@type":"Question",
+   "name":"Какие китайские электромобили не попадают под льготный утильсбор",
+   "acceptedAnswer":{ "@type":"Answer", "text":"Любой электромобиль мощнее 80 л.с. по 30-минутному режиму теряет право на льготную ставку и переходит на коммерческую шкалу. Многие модели Zeekr, Li Auto и часть версий BYD превышают этот порог." }
+  }
+ ]
+}
+</script>
+
+</head>
+<body>
+
+<header class="header">
+  <div class="container header-row">
+    <a href="/" class="logo">Растаможка<span>·Calc</span></a>
+    <button type="button" class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="siteNav">
+      <span></span><span></span><span></span>
+      <span class="sr-only">Меню</span>
+    </button>
+    <nav id="siteNav" class="site-nav">
+      <ul>
+        <li><a href="#calculator">Калькулятор</a></li>
+        <li><a href="#specifics">Особенности Китая</a></li>
+        <li><a href="#models">Модели</a></li>
+        <li><a href="#faq">Вопросы</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ============================= HERO ============================= -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-content">
+      <p class="eyebrow">Ставки на январь 2026 года</p>
+      <h1>Растаможка автомобиля из Китая: расчёт по шагам</h1>
+      <p class="hero-text">
+        Китай — основной источник машин на вторичном и первичном рынке последние несколько лет,
+        и структура платежей здесь та же, что для любой другой страны. Разница в деталях:
+        электромобили и гибриды из Китая чаще, чем машины с ДВС, вылетают за рамки льготного
+        утильсбора, а курс юаня иногда меняется быстрее, чем едет контейнеровоз.
+      </p>
+      <ul class="hero-points">
+        <li>Расчёт сразу в юанях, с автопересчётом в рубли и евро</li>
+        <li>Отдельная проверка лимита для электромобилей — 80 л.с.</li>
+        <li>Показывает, какая сумма от чего зависит</li>
+      </ul>
+      <a href="#calculator" class="button">Рассчитать</a>
+    </div>
+
+    <div class="hero-note" aria-hidden="true">
+      <p class="hero-note-label">На что смотреть при выборе авто из Китая</p>
+      <ol class="hero-note-list">
+        <li>Мощность электромотора — от неё зависит утильсбор, а не только динамика</li>
+        <li>Объём двигателя в ПТС производителя — иногда указан иначе, чем в рекламе</li>
+        <li>Курс CNY/RUB на дату подачи декларации, а не на дату брони</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= CALCULATOR ============================= -->
+<section id="calculator" class="calculator">
+  <div class="container">
+    <h2>Калькулятор растаможки авто из Китая</h2>
+    <p class="section-lead">
+      Валюта по умолчанию — юань, но можно посчитать и в другой. Курсы можно поправить вручную,
+      если у вас есть точное значение на сегодня.
+    </p>
+
+    <div class="calc-shell">
+      <form id="calcForm" class="calc-form" autocomplete="off">
+
+        <fieldset class="field-group">
+          <legend>Кто оформляет ввоз</legend>
+          <div class="segmented" id="ownerSwitch">
+            <button type="button" class="seg-btn is-active" data-value="person">Физическое лицо</button>
+            <button type="button" class="seg-btn" data-value="company">Юридическое лицо / ИП</button>
+          </div>
+        </fieldset>
+
+        <div class="field-row" id="purposeRow">
+          <label class="checkbox-line">
+            <input type="checkbox" id="personalUse" checked>
+            <span>Ввожу для личного пользования, не на продажу</span>
+          </label>
+        </div>
+
+        <div class="form-grid">
+
+          <div class="field">
+            <label for="sourceCountry">Страна покупки</label>
+            <select id="sourceCountry">
+              <option value="china" selected>Китай</option>
+              <option value="korea">Южная Корея</option>
+              <option value="japan">Япония</option>
+              <option value="germany">Германия</option>
+              <option value="usa">США</option>
+              <option value="uae">ОАЭ</option>
+              <option value="other">Другая страна</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="currency">Валюта в договоре</label>
+            <select id="currency">
+              <option value="CNY" selected>Юань, CNY</option>
+              <option value="KRW">Вона, KRW</option>
+              <option value="JPY">Иена, JPY</option>
+              <option value="EUR">Евро, EUR</option>
+              <option value="USD">Доллар, USD</option>
+              <option value="AED">Дирхам, AED</option>
+              <option value="RUB">Рубль, RUB</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="carPrice">Стоимость автомобиля</label>
+            <input id="carPrice" type="number" inputmode="decimal" placeholder="Например, 150000" min="0">
+          </div>
+
+          <div class="field">
+            <label for="delivery">Доставка до границы РФ</label>
+            <input id="delivery" type="number" inputmode="decimal" placeholder="0" min="0">
+            <span class="field-hint">в той же валюте, что и цена</span>
+          </div>
+
+          <div class="field">
+            <label for="rateToRub">Курс валюты договора к рублю</label>
+            <input id="rateToRub" type="number" step="0.01" inputmode="decimal">
+          </div>
+
+          <div class="field">
+            <label for="eurToRub">Курс евро к рублю</label>
+            <input id="eurToRub" type="number" step="0.01" inputmode="decimal" value="105">
+            <span class="field-hint">пошлина считается в евро — это влияет на итог</span>
+          </div>
+
+          <div class="field">
+            <label for="year">Год выпуска</label>
+            <input id="year" type="number" placeholder="2022" min="1980" max="2026">
+          </div>
+
+          <div class="field">
+            <label for="month">Месяц выпуска</label>
+            <select id="month">
+              <option value="1">Январь</option><option value="2">Февраль</option>
+              <option value="3">Март</option><option value="4">Апрель</option>
+              <option value="5">Май</option><option value="6">Июнь</option>
+              <option value="7">Июль</option><option value="8">Август</option>
+              <option value="9">Сентябрь</option><option value="10">Октябрь</option>
+              <option value="11">Ноябрь</option><option value="12" selected>Декабрь</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="fuel">Тип двигателя</label>
+            <select id="fuel">
+              <option value="petrol">Бензин</option>
+              <option value="diesel">Дизель</option>
+              <option value="hybrid">Гибрид</option>
+              <option value="electric">Электромобиль</option>
+            </select>
+          </div>
+
+          <div class="field" id="engineField">
+            <label for="engine">Объём двигателя, см³</label>
+            <input id="engine" type="number" placeholder="1500" min="0">
+          </div>
+
+          <div class="field">
+            <label for="power">Мощность, л.с.</label>
+            <input id="power" type="number" placeholder="132" min="0">
+          </div>
+
+        </div>
+
+        <div class="buttons">
+          <button type="button" id="calculate" class="button">Рассчитать растаможку</button>
+          <button type="reset" class="button-ghost">Очистить форму</button>
+        </div>
+      </form>
+
+      <div id="result" class="receipt">
+        <p class="receipt-placeholder">
+          Здесь появится расчёт с разбивкой по каждому платежу — как только вы заполните
+          стоимость автомобиля, год выпуска и объём двигателя.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================= SPECIFICS ============================= -->
+<section id="specifics" class="breakdown">
+  <div class="container">
+    <h2>Что в расчёте из Китая отличается на практике</h2>
+    <p class="section-lead">
+      Формулы одни для всех стран — но именно на китайских машинах чаще всего встречаются
+      ситуации, из-за которых предварительная прикидка расходится с итоговым счётом на таможне.
+    </p>
+
+    <div class="line-cards">
+      <article>
+        <span class="line-tag">01</span>
+        <h3>Электромобили и лимит 80 л.с.</h3>
+        <p>
+          Для электромобиля льготная ставка утильсбора действует только при мощности до 80 л.с.
+          по 30-минутному режиму — это заметно ниже привычного порога 160 л.с. для бензиновых
+          машин. Часть китайских электромобилей в базовой комплектации в лимит укладывается,
+          более мощные версии — нет.
+        </p>
+      </article>
+      <article>
+        <span class="line-tag">02</span>
+        <h3>Подключаемые гибриды считаются как ДВС</h3>
+        <p>
+          Для гибрида пошлина считается так же, как для бензиновой машины — по объёму двигателя
+          внутреннего сгорания или по стоимости, в зависимости от возраста. Электрический
+          компонент на пошлину не влияет, но может повлиять на лимит по утильсбору, если общая
+          мощность превышает пороговое значение.
+        </p>
+      </article>
+      <article>
+        <span class="line-tag">03</span>
+        <h3>Курс юаня меняется за время доставки</h3>
+        <p>
+          Путь из Китая занимает от нескольких недель, и за это время курс CNY/RUB может уйти
+          в любую сторону на несколько процентов. Разумно закладывать в бюджет запас 3–5%
+          сверх суммы, которую показывает калькулятор на дату заказа.
+        </p>
+      </article>
+      <article>
+        <span class="line-tag">04</span>
+        <h3>Заявленная и реальная мощность</h3>
+        <p>
+          В части объявлений мощность указывается по внутрикитайским стандартам замера, которые
+          могут немного отличаться от значений в ПТС после сертификации. Для расчёта утильсбора
+          важна именно итоговая цифра, а не рекламная.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= MODELS ============================= -->
+<section id="models" class="countries">
+  <div class="container">
+    <h2>На что обратить внимание по маркам</h2>
+    <p class="section-lead">
+      Ниже — не рейтинг и не рекомендация конкретной марки, а список моментов, которые стоит
+      проверить до покупки именно из-за того, как они отражаются на растаможке.
+    </p>
+    <div class="country-grid">
+      <article>
+        <h3>Chery, Geely, Haval, Changan</h3>
+        <p>Массовые бензиновые модели почти всегда укладываются в лимиты льготного утильсбора —
+        достаточно свериться с объёмом двигателя и мощностью в паспорте.</p>
+      </article>
+      <article>
+        <h3>BYD</h3>
+        <p>Линейка широкая: часть моделей — чистые электромобили, часть — гибриды с увеличенным
+        запасом хода. Формула расчёта пошлины для них разная, уточняйте тип силовой установки
+        конкретной версии перед расчётом.</p>
+      </article>
+      <article>
+        <h3>Zeekr, Li Auto, Avatr</h3>
+        <p>Премиальные электромобили и гибриды нередко превышают порог мощности для льготного
+        утильсбора — стоит заранее прогнать характеристики через калькулятор выше.</p>
+      </article>
+      <article>
+        <h3>Ноускаты и разбор на запчасти</h3>
+        <p>Отдельная категория ввоза с собственными правилами определения таможенной стоимости —
+        общий калькулятор для целых автомобилей для такого расчёта не подходит.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= FAQ ============================= -->
+<section id="faq" class="faq">
+  <div class="container">
+    <h2>Вопросы о растаможке авто из Китая</h2>
+
+    <div class="faq-list">
+      <details>
+        <summary>Отличается ли пошлина для авто из Китая от пошлины на машину из Европы?</summary>
+        <p>
+          Нет, формула одна и та же для любой страны покупки — она зависит от возраста автомобиля,
+          объёма двигателя и его стоимости, а не от того, где машина куплена.
+        </p>
+      </details>
+      <details>
+        <summary>Правда ли, что растаможка электромобилей из Китая обходится дороже?</summary>
+        <p>
+          Не автоматически. Дороже она становится, если мощность электромотора выше 80 л.с. —
+          тогда утильсбор считается по коммерческой шкале. Компактные электромобили в лимит
+          укладываются и растаможиваются по льготной ставке, как и обычные бензиновые машины.
+        </p>
+      </details>
+      <details>
+        <summary>Как учесть курс юаня, если он меняется каждый день?</summary>
+        <p>
+          Введите текущий курс CNY/RUB вручную в поле калькулятора — по умолчанию там стоит
+          ориентировочное значение, но для точности лучше подставить актуальное на сегодня.
+        </p>
+      </details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <a href="/" class="logo">Растаможка<span>·Calc</span></a>
+      <p>Независимый калькулятор предварительной стоимости растаможки автомобиля в России.</p>
+    </div>
+    <div>
+      <h3>Растаможка по странам</h3>
+      <ul class="footer-countries">
+        <li><a href="/china/">Китай</a></li>
+        <li>Япония</li>
+        <li>Корея</li>
+        <li>Грузия</li>
+        <li>Казахстан</li>
+        <li>Киргизия</li>
+        <li>Германия</li>
+        <li>США</li>
+        <li>Армения</li>
+        <li>Монголия</li>
+        <li>Узбекистан</li>
+        <li>Таджикистан</li>
+        <li>ОАЭ</li>
+        <li>Кыргызстан</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Информация</h3>
+      <ul>
+        <li><a href="https://rastamozhka-calc.github.io/privacy">Политика конфиденциальности</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container copyright">
+    © 2026 Rastamozhka Calc. Расчёт носит справочный характер и не заменяет официальное
+    таможенное оформление.
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"BreadcrumbList",
+ "itemListElement":[
+   { "@type":"ListItem", "position":1, "name":"Главная", "item":"https://rastamozhka-calc.github.io/" },
+   { "@type":"ListItem", "position":2, "name":"Китай", "item":"https://rastamozhka-calc.github.io/china/" }
+ ]
+}
+</script>
+
+<script src="/script.js" defer></script>
+</body>
+</html>
