@@ -974,6 +974,22 @@ details p {
 }
 
 
+details ul,
+details ol {
+    margin: 10px 0 14px;
+    padding-left: 36px;
+    font-size: 14.5px;
+    color: var(--ink-soft);
+    display: grid;
+    gap: 6px;
+}
+
+
+details li {
+    line-height: 1.55;
+}
+
+
 /* ======================================================
    METHODOLOGY / TRUST
 ====================================================== */
