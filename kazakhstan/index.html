@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Калькулятор растаможки авто из Казахстана в Россию</title>
+
+<meta name="description" content="Расчёт стоимости растаможки авто из Казахстана: когда нужно доплатить разницу пошлины до ставки ЕТТ, а когда — только утильсбор. Ставки 2026 года, объяснение двухтарифной системы ЕАЭС.">
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<link rel="canonical" href="https://rastamozhka-calc.github.io/kazakhstan/">
+<meta name="theme-color" content="#12305c">
+<meta name="author" content="Rastamozhka Calc">
+<meta name="application-name" content="Rastamozhka Calc">
+<meta name="format-detection" content="telephone=no">
+<link rel="alternate" hreflang="ru" href="https://rastamozhka-calc.github.io/kazakhstan/">
+<link rel="alternate" hreflang="x-default" href="https://rastamozhka-calc.github.io/kazakhstan/">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="Расчёт стоимости растаможки авто из Казахстана в Россию">
+<meta property="og:description" content="Когда при ввозе авто из Казахстана нужно доплачивать пошлину, а когда достаточно утильсбора. Расчёт по ставкам 2026 года.">
+<meta property="og:url" content="https://rastamozhka-calc.github.io/kazakhstan/">
+<meta property="og:site_name" content="Rastamozhka Calc">
+<meta property="og:image" content="https://rastamozhka-calc.github.io/img/cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Растаможка авто из Казахстана — калькулятор 2026">
+<meta name="twitter:description" content="Расчёт таможенных платежей при ввозе автомобиля из Казахстана по ставкам 2026 года.">
+<meta name="twitter:image" content="https://rastamozhka-calc.github.io/img/cover.jpg">
+
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/style.css">
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"WebPage",
+ "name":"Расчёт стоимости растаможки авто из Казахстана в Россию",
+ "url":"https://rastamozhka-calc.github.io/kazakhstan/",
+ "inLanguage":"ru",
+ "isPartOf":{ "@type":"WebSite", "name":"Rastamozhka Calc", "url":"https://rastamozhka-calc.github.io/" }
+}
+</script>
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"FAQPage",
+ "mainEntity":[
+  {
+   "@type":"Question",
+   "name":"Нужно ли ещё раз платить пошлину при ввозе авто из Казахстана в Россию",
+   "acceptedAnswer":{ "@type":"Answer", "text":"Зависит от того, по какому тарифу машина была растаможена в Казахстане. Если пошлина уже уплачена по единому таможенному тарифу ЕАЭС — второй раз платить не нужно, при ввозе в Россию потребуется только утилизационный сбор. Если использовался пониженный национальный тариф Казахстана, придётся доплатить разницу до уровня общего тарифа ЕАЭС." }
+  },
+  {
+   "@type":"Question",
+   "name":"Что тогда считает калькулятор на этой странице",
+   "acceptedAnswer":{ "@type":"Answer", "text":"Калькулятор показывает сумму по единому таможенному тарифу ЕАЭС — тому же, что действует в России. Эта цифра — ориентир: если в Казахстане уже уплачено ровно столько же или больше, доплаты не будет, кроме утильсбора. Если уплачено меньше, разница между этой суммой и уже уплаченной и есть примерный размер доплаты." }
+  }
+ ]
+}
+</script>
+
+</head>
+<body data-country-page="kazakhstan">
+
+<header class="header">
+  <div class="container header-row">
+    <a href="/" class="logo">Растаможка<span>·Calc</span></a>
+    <button type="button" class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="siteNav">
+      <span></span><span></span><span></span>
+      <span class="sr-only">Меню</span>
+    </button>
+    <nav id="siteNav" class="site-nav">
+      <ul>
+        <li><a href="#calculator">Калькулятор</a></li>
+        <li><a href="#specifics">Два тарифа Казахстана</a></li>
+        <li><a href="#models">Модели</a></li>
+        <li><a href="#faq">Вопросы</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ============================= HERO ============================= -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-content">
+      <p class="eyebrow">Новые ставки 2026 года</p>
+      <h1>Расчет стоимости растаможки авто из Казахстана в Россию</h1>
+      <p class="hero-text">
+        Казахстан состоит в Евразийском экономическом союзе вместе с Россией, поэтому ввоз
+        оттуда работает иначе, чем из Китая, Японии или Кореи. Ключевой вопрос — не «сколько
+        считать», а «уже посчитано или нет». После вступления в ВТО Казахстан получил право
+        растаможивать машины по собственному, более низкому тарифу, отдельному от общего
+        тарифа ЕАЭС. Если машина ввезена по этому пониженному тарифу, при её перегоне в Россию
+        нужно доплатить разницу — а если по общему тарифу ЕАЭС, доплачивать пошлину уже не
+        придётся, останется только утилизационный сбор.
+      </p>
+      <ul class="hero-points">
+        <li>Показывает сумму по общему тарифу ЕАЭС — точке отсчёта для доплаты</li>
+        <li>Отдельно объясняет, когда доплата не нужна вовсе</li>
+        <li>Учитывает утильсбор, который платится в любом случае</li>
+      </ul>
+      <a href="#calculator" class="button">Рассчитать</a>
+    </div>
+
+    <div class="hero-note" aria-hidden="true">
+      <p class="hero-note-label">Прежде чем платить за машину</p>
+      <ol class="hero-note-list">
+        <li>Попросите у продавца копию казахстанской декларации на авто</li>
+        <li>Уточните, по какому тарифу платилась пошлина — национальному или ЕТТ</li>
+        <li>Заложите в бюджет утильсбор — он не зависит от тарифа и платится всегда</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= CALCULATOR ============================= -->
+<section id="calculator" class="calculator">
+  <div class="container">
+    <h2>Калькулятор растаможки авто из Казахстана</h2>
+    <p class="section-lead">
+      Валюта по умолчанию — доллар: удобно для машин, которые изначально ввезены в Казахстан
+      из третьих стран. Если у вас цена в тенге, переведите её в доллары или рубли по текущему
+      курсу перед расчётом. Помните: цифра ниже — это сумма по общему тарифу ЕАЭС, а не
+      обязательно то, что вы заплатите — подробности в разделе ниже калькулятора.
+    </p>
+
+    <div class="calc-shell">
+      <form id="calcForm" class="calc-form" autocomplete="off">
+
+        <fieldset class="field-group">
+          <legend>Кто оформляет ввоз</legend>
+          <div class="segmented" id="ownerSwitch">
+            <button type="button" class="seg-btn is-active" data-value="person">Физическое лицо</button>
+            <button type="button" class="seg-btn" data-value="company">Юридическое лицо / ИП</button>
+          </div>
+        </fieldset>
+
+        <div class="field-row" id="purposeRow">
+          <label class="checkbox-line">
+            <input type="checkbox" id="personalUse" checked>
+            <span>Ввожу для личного пользования, не на продажу</span>
+          </label>
+        </div>
+
+        <div class="form-grid">
+
+          <div class="field">
+            <label for="sourceCountry">Страна покупки</label>
+            <select id="sourceCountry">
+              <option value="china">Китай</option>
+              <option value="yaponiya">Япония</option>
+              <option value="koreya">Корея</option>
+              <option value="gruziya">Грузия</option>
+              <option value="kazakhstan" selected>Казахстан</option>
+              <option value="kirgiziya">Киргизия</option>
+              <option value="germaniya">Германия</option>
+              <option value="usa">США</option>
+              <option value="armeniya">Армения</option>
+              <option value="mongoliya">Монголия</option>
+              <option value="uzbekistan">Узбекистан</option>
+              <option value="tadzhikistan">Таджикистан</option>
+              <option value="oae">ОАЭ</option>
+              <option value="kyrgyzstan">Кыргызстан</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="currency">Валюта в договоре</label>
+            <select id="currency">
+              <option value="USD" selected>Доллар, USD</option>
+              <option value="EUR">Евро, EUR</option>
+              <option value="CNY">Юань, CNY</option>
+              <option value="KRW">Вона, KRW</option>
+              <option value="JPY">Иена, JPY</option>
+              <option value="AED">Дирхам, AED</option>
+              <option value="RUB">Рубль, RUB</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="carPrice">Стоимость автомобиля</label>
+            <input id="carPrice" type="number" inputmode="decimal" placeholder="Например, 12000" min="0">
+          </div>
+
+          <div class="field">
+            <label for="delivery">Доставка до границы РФ</label>
+            <input id="delivery" type="number" inputmode="decimal" placeholder="0" min="0">
+            <span class="field-hint">в той же валюте, что и цена</span>
+          </div>
+
+          <div class="field">
+            <label for="rateToRub">Курс валюты договора к рублю</label>
+            <input id="rateToRub" type="number" step="0.01" inputmode="decimal">
+          </div>
+
+          <div class="field">
+            <label for="eurToRub">Курс евро к рублю</label>
+            <input id="eurToRub" type="number" step="0.01" inputmode="decimal" value="105">
+            <span class="field-hint">пошлина считается в евро — это влияет на итог</span>
+          </div>
+
+          <div class="field">
+            <label for="year">Год выпуска</label>
+            <input id="year" type="number" placeholder="2021" min="1980" max="2026">
+          </div>
+
+          <div class="field">
+            <label for="month">Месяц выпуска</label>
+            <select id="month">
+              <option value="1">Январь</option><option value="2">Февраль</option>
+              <option value="3">Март</option><option value="4">Апрель</option>
+              <option value="5">Май</option><option value="6">Июнь</option>
+              <option value="7">Июль</option><option value="8">Август</option>
+              <option value="9">Сентябрь</option><option value="10">Октябрь</option>
+              <option value="11">Ноябрь</option><option value="12" selected>Декабрь</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="fuel">Тип двигателя</label>
+            <select id="fuel">
+              <option value="petrol">Бензин</option>
+              <option value="diesel">Дизель</option>
+              <option value="hybrid">Гибрид</option>
+              <option value="electric">Электромобиль</option>
+            </select>
+          </div>
+
+          <div class="field" id="engineField">
+            <label for="engine">Объём двигателя, см³</label>
+            <input id="engine" type="number" placeholder="1600" min="0">
+          </div>
+
+          <div class="field">
+            <label for="power">Мощность, л.с.</label>
+            <input id="power" type="number" placeholder="130" min="0">
+          </div>
+
+        </div>
+
+        <div class="buttons">
+          <button type="button" id="calculate" class="button">Рассчитать растаможку</button>
+          <button type="reset" class="button-ghost">Очистить форму</button>
+        </div>
+      </form>
+
+      <div id="result" class="receipt">
+        <p class="receipt-placeholder">
+          Здесь появится расчёт с разбивкой по каждому платежу — как только вы заполните
+          стоимость автомобиля, год выпуска и объём двигателя.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================= SPECIFICS ============================= -->
+<section id="specifics" class="breakdown">
+  <div class="container">
+    <h2>Почему у Казахстана два тарифа и как это влияет на расчёт</h2>
+    <p class="section-lead">
+      Это единственная страна из нашего списка, где сам факт растаможки не гарантирует, что
+      в России платить больше не придётся. Разберём по порядку, что происходит в каждом случае.
+    </p>
+
+    <div class="line-cards">
+      <article>
+        <span class="line-tag">01</span>
+        <h3>Национальный тариф Казахстана</h3>
+        <p>
+          После вступления в ВТО Казахстан получил право растаможивать часть товаров, включая
+          автомобили, по собственным ставкам — они ниже, чем общий тариф ЕАЭС. Машина,
+          ввезённая по такому тарифу, свободно ездит внутри Казахстана, но при вывозе в Россию
+          или другую страну союза считается «недорастаможенной» — разницу нужно доплатить.
+        </p>
+      </article>
+      <article>
+        <span class="line-tag">02</span>
+        <h3>Единый таможенный тариф ЕАЭС</h3>
+        <p>
+          Если импортёр в Казахстане заплатил пошлину по общему тарифу союза — по сути, той же
+          формуле, что действует и в России, — статус у машины другой: она признаётся товаром
+          союза и может свободно перемещаться между странами-участницами. В этом случае при
+          ввозе в Россию пошлину повторно не платят.
+        </p>
+      </article>
+      <article>
+        <span class="line-tag">03</span>
+        <h3>Утильсбор — отдельная история</h3>
+        <p>
+          Независимо от того, по какому тарифу растаможена машина, утилизационный сбор при
+          первой регистрации в России платится в любом случае — это российский сбор, а не часть
+          таможенной пошлины, и Казахстан его не подменяет.
+        </p>
+      </article>
+      <article>
+        <span class="line-tag">04</span>
+        <h3>Повышенное внимание к схемам</h3>
+        <p>
+          Машины, ввезённые в Казахстан по заниженным ставкам с явными признаками того, что
+          конечная цель — Россия, попадают в зону риска: таможня вправе доначислить пошлину,
+          если увидит признаки такой схемы. Разумно ориентироваться на честную доплату, а не
+          рассчитывать проскочить проверку.
+        </p>
+      </article>
+    </div>
+
+    <div class="callout">
+      <p>
+        <strong>Как понять, сколько доплатить:</strong> сумма, которую показывает калькулятор
+        выше, — это расчёт по общему тарифу ЕАЭС. Если у вас на руках казахстанская декларация
+        с суммой уплаченной пошлины, разница между этими двумя цифрами и есть примерный размер
+        доплаты в России. Точную сумму в любом случае озвучит таможня при подаче документов.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= MODELS ============================= -->
+<section id="models" class="countries">
+  <div class="container">
+    <h2>На что обратить внимание по типам автомобилей</h2>
+    <p class="section-lead">
+      Казахстанский рынок — это смесь локальной сборки и реэкспорта, и это тоже стоит учитывать
+      до расчёта.
+    </p>
+    <div class="country-grid">
+      <article>
+        <h3>Машины местной сборки</h3>
+        <p>Часть моделей Kia, Hyundai, Chevrolet и других марок собирается на казахстанских
+        заводах — у таких автомобилей статус товара союза определяется по правилам
+        происхождения и часто отличается от обычного импорта.</p>
+      </article>
+      <article>
+        <h3>Реэкспорт из Китая</h3>
+        <p>Через Казахстан идёт заметный поток китайских машин — здесь особенно важно уточнять,
+        по какому тарифу они растаможены при первом ввозе в страну.</p>
+      </article>
+      <article>
+        <h3>Праворульные машины из Японии</h3>
+        <p>Встречаются реже, чем во Владивостокском направлении, но тоже попадаются — расчёт
+        пошлины для них не отличается от обычного, руль на формулу не влияет.</p>
+      </article>
+      <article>
+        <h3>Электромобили</h3>
+        <p>Действует отдельная формула пошлины и сниженный лимит мощности для льготного
+        утильсбора — 80 л.с. вместо 160, независимо от того, где машина растаможена изначально.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= FAQ ============================= -->
+<section id="faq" class="faq">
+  <div class="container">
+    <h2>Вопросы о растаможке авто из Казахстана</h2>
+
+    <div class="faq-list">
+
+      <details>
+        <summary>Нужно ли ещё раз платить пошлину при ввозе авто из Казахстана в Россию?</summary>
+        <p>
+          Зависит от того, по какому тарифу машина растаможена в Казахстане. Если по общему
+          тарифу ЕАЭС — второй раз пошлину платить не нужно, только утильсбор. Если по
+          пониженному национальному тарифу Казахстана — придётся доплатить разницу до уровня
+          общего тарифа.
+        </p>
+      </details>
+
+      <details>
+        <summary>Что тогда считает калькулятор на этой странице?</summary>
+        <p>
+          Он показывает сумму по общему тарифу ЕАЭС — той же формуле, что действует и в России.
+          Это ориентир для сравнения: если в Казахстане уже уплачено столько же или больше,
+          доплаты не будет, кроме утильсбора. Если уплачено меньше — разница между суммами
+          и есть примерная доплата.
+        </p>
+      </details>
+
+      <details>
+        <summary>Как узнать, по какому тарифу растаможена конкретная машина?</summary>
+        <p>
+          Эта информация указывается в казахстанской таможенной декларации на автомобиль —
+          попросите её копию у продавца перед покупкой. Без этого документа заранее оценить,
+          нужна ли доплата, будет сложно.
+        </p>
+      </details>
+
+      <details>
+        <summary>Можно ли вообще не платить ничего, кроме утильсбора?</summary>
+        <p>
+          Да, если машина была растаможена в Казахстане по общему тарифу ЕАЭС или произведена
+          в Казахстане с признанным статусом товара союза. В обоих случаях при ввозе в Россию
+          платится только утилизационный сбор.
+        </p>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <a href="/" class="logo">Растаможка<span>·Calc</span></a>
+      <p>Независимый калькулятор предварительной стоимости растаможки автомобиля в России.</p>
+    </div>
+    <div>
+      <h3>Растаможка по странам</h3>
+      <ul class="footer-countries">
+        <li><a href="/china/">Китай</a></li>
+        <li><a href="/yaponiya/">Япония</a></li>
+        <li><a href="/koreya/">Корея</a></li>
+        <li><a href="/gruziya/">Грузия</a></li>
+        <li><a href="/kazakhstan/">Казахстан</a></li>
+        <li><a href="/kirgiziya/">Киргизия</a></li>
+        <li><a href="/germaniya/">Германия</a></li>
+        <li><a href="/usa/">США</a></li>
+        <li><a href="/armeniya/">Армения</a></li>
+        <li><a href="/mongoliya/">Монголия</a></li>
+        <li><a href="/uzbekistan/">Узбекистан</a></li>
+        <li><a href="/tadzhikistan/">Таджикистан</a></li>
+        <li><a href="/oae/">ОАЭ</a></li>
+        <li><a href="/kyrgyzstan/">Кыргызстан</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Информация</h3>
+      <ul>
+        <li><a href="https://rastamozhka-calc.github.io/privacy/">Политика конфиденциальности</a></li>
+        <li><a href="https://rastamozhka-calc.github.io/about/">О проекте</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container copyright">
+    © 2026 Rastamozhka Calc. Расчёт носит справочный характер и не заменяет официальное
+    таможенное оформление.
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"BreadcrumbList",
+ "itemListElement":[
+   { "@type":"ListItem", "position":1, "name":"Главная", "item":"https://rastamozhka-calc.github.io/" },
+   { "@type":"ListItem", "position":2, "name":"Казахстан", "item":"https://rastamozhka-calc.github.io/kazakhstan/" }
+ ]
+}
+</script>
+
+<script src="/script.js" defer></script>
+</body>
+</html>
