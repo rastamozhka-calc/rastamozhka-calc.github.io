@@ -30,6 +30,24 @@
         RUB: 1
     };
 
+    // Страны, для которых есть отдельные страницы. slug совпадает с адресом страницы (/slug/)
+    const COUNTRY_PAGES = [
+        { value: "china",        slug: "china",        currency: "CNY" },
+        { value: "yaponiya",     slug: "yaponiya",      currency: "JPY" },
+        { value: "koreya",       slug: "koreya",        currency: "KRW" },
+        { value: "gruziya",      slug: "gruziya",       currency: "USD" },
+        { value: "kazakhstan",   slug: "kazakhstan",    currency: "USD" },
+        { value: "kirgiziya",    slug: "kirgiziya",     currency: "USD" },
+        { value: "germaniya",    slug: "germaniya",     currency: "EUR" },
+        { value: "usa",          slug: "usa",           currency: "USD" },
+        { value: "armeniya",     slug: "armeniya",      currency: "USD" },
+        { value: "mongoliya",    slug: "mongoliya",     currency: "USD" },
+        { value: "uzbekistan",   slug: "uzbekistan",    currency: "USD" },
+        { value: "tadzhikistan", slug: "tadzhikistan",  currency: "USD" },
+        { value: "oae",          slug: "oae",           currency: "AED" },
+        { value: "kyrgyzstan",   slug: "kyrgyzstan",    currency: "USD" }
+    ];
+
     // Пошлина для физлиц, авто младше 3 лет: [макс. стоимость €, % от стоимости, минимум €/см³]
     const DUTY_NEW_BY_VALUE = [
         { max: 8500,    percent: 0.54, minPerCc: 2.5 },
@@ -365,51 +383,86 @@
         }
 
         const ownerSwitch = document.getElementById("ownerSwitch");
-        const purposeRow = document.getElementById("purposeRow");
-        const currencySelect = document.getElementById("currency");
-        const rateInput = document.getElementById("rateToRub");
-        const fuelSelect = document.getElementById("fuel");
-        const engineField = document.getElementById("engineField");
 
-        function syncOwnerUI() {
-            const value = ownerSwitch.querySelector(".seg-btn.is-active").dataset.value;
-            purposeRow.style.display = value === "person" ? "block" : "none";
-        }
+        if (ownerSwitch) {
 
-        ownerSwitch.querySelectorAll(".seg-btn").forEach(function (btn) {
-            btn.addEventListener("click", function () {
-                ownerSwitch.querySelectorAll(".seg-btn").forEach(b => b.classList.remove("is-active"));
-                btn.classList.add("is-active");
-                syncOwnerUI();
+            const purposeRow = document.getElementById("purposeRow");
+            const currencySelect = document.getElementById("currency");
+            const rateInput = document.getElementById("rateToRub");
+            const fuelSelect = document.getElementById("fuel");
+            const engineField = document.getElementById("engineField");
+            const sourceCountrySelect = document.getElementById("sourceCountry");
+            const countryContext = document.body.getAttribute("data-country-page");
+
+            function syncOwnerUI() {
+                const value = ownerSwitch.querySelector(".seg-btn.is-active").dataset.value;
+                purposeRow.style.display = value === "person" ? "block" : "none";
+            }
+
+            ownerSwitch.querySelectorAll(".seg-btn").forEach(function (btn) {
+                btn.addEventListener("click", function () {
+                    ownerSwitch.querySelectorAll(".seg-btn").forEach(b => b.classList.remove("is-active"));
+                    btn.classList.add("is-active");
+                    syncOwnerUI();
+                });
             });
-        });
 
-        function syncRateDefault() {
-            rateInput.value = DEFAULT_RATES[currencySelect.value];
+            function syncRateDefault() {
+                rateInput.value = DEFAULT_RATES[currencySelect.value];
+            }
+
+            currencySelect.addEventListener("change", syncRateDefault);
+
+            function syncFuelUI() {
+                engineField.style.display = fuelSelect.value === "electric" ? "none" : "block";
+            }
+
+            fuelSelect.addEventListener("change", syncFuelUI);
+
+            // На странице конкретной страны (china, yaponiya и т.д.) форма подставляет
+            // страну и валюту по умолчанию. При выборе другой страны в списке — переход
+            // на соответствующую страницу. На главной этот блок не срабатывает.
+            if (countryContext && sourceCountrySelect) {
+
+                sourceCountrySelect.value = countryContext;
+
+                const currentConfig = COUNTRY_PAGES.find(function (c) {
+                    return c.value === countryContext;
+                });
+
+                if (currentConfig) {
+                    currencySelect.value = currentConfig.currency;
+                }
+
+                sourceCountrySelect.addEventListener("change", function () {
+                    const target = COUNTRY_PAGES.find(function (c) {
+                        return c.value === sourceCountrySelect.value;
+                    });
+                    if (target && target.slug !== countryContext) {
+                        window.location.href = "/" + target.slug + "/";
+                    }
+                });
+            }
+
+            syncOwnerUI();
+            syncRateDefault();
+            syncFuelUI();
+
+            document.getElementById("calculate").addEventListener("click", runCalculation);
+
+            document.getElementById("calcForm").addEventListener("reset", function () {
+                window.setTimeout(function () {
+                    if (countryContext && sourceCountrySelect) {
+                        sourceCountrySelect.value = countryContext;
+                    }
+                    syncRateDefault();
+                    document.getElementById("eurToRub").value = 105;
+                    document.getElementById("result").innerHTML =
+                        `<p class="receipt-placeholder">Здесь появится расчёт с разбивкой по каждому платежу — как только вы заполните стоимость автомобиля, год выпуска и объём двигателя.</p>`;
+                }, 10);
+            });
+
         }
-
-        currencySelect.addEventListener("change", syncRateDefault);
-
-        function syncFuelUI() {
-            engineField.style.display = fuelSelect.value === "electric" ? "none" : "block";
-        }
-
-        fuelSelect.addEventListener("change", syncFuelUI);
-
-        syncOwnerUI();
-        syncRateDefault();
-        syncFuelUI();
-
-        document.getElementById("calculate").addEventListener("click", runCalculation);
-
-        document.getElementById("calcForm").addEventListener("reset", function () {
-            window.setTimeout(function () {
-                syncRateDefault();
-                document.getElementById("eurToRub").value = 105;
-                document.getElementById("result").innerHTML =
-                    `<p class="receipt-placeholder">Здесь появится расчёт с разбивкой по каждому платежу — как только вы заполните стоимость автомобиля, год выпуска и объём двигателя.</p>`;
-            }, 10);
-        });
 
     });
 
