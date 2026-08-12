@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Калькулятор растаможки авто из ОАЭ в Россию</title>
+
+<meta name="description" content="Расчёт стоимости растаможки авто из ОАЭ: пошлина, таможенный сбор и утильсбор по ставкам 2026 года. Маршруты доставки из Дубая, мощные модели и почему выгодная цена на месте не всегда остаётся выгодной после растаможки.">
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<link rel="canonical" href="https://rastamozhka-calc.github.io/oae/">
+<meta name="theme-color" content="#12305c">
+<meta name="author" content="Rastamozhka Calc">
+<meta name="application-name" content="Rastamozhka Calc">
+<meta name="format-detection" content="telephone=no">
+<link rel="alternate" hreflang="ru" href="https://rastamozhka-calc.github.io/oae/">
+<link rel="alternate" hreflang="x-default" href="https://rastamozhka-calc.github.io/oae/">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="Калькулятор растаможки авто из ОАЭ в Россию">
+<meta property="og:description" content="Расчёт таможенных платежей при ввозе автомобиля из ОАЭ: пошлина, сбор и утильсбор, плюс маршруты доставки из Дубая и особенности мощных моделей.">
+<meta property="og:url" content="https://rastamozhka-calc.github.io/oae/">
+<meta property="og:site_name" content="Rastamozhka Calc">
+<meta property="og:image" content="https://rastamozhka-calc.github.io/img/cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Растаможка авто из ОАЭ - калькулятор 2026">
+<meta name="twitter:description" content="Расчёт таможенных платежей при ввозе автомобиля из ОАЭ по ставкам 2026 года.">
+<meta name="twitter:image" content="https://rastamozhka-calc.github.io/img/cover.jpg">
+
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/style.css">
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"WebPage",
+ "name":"Растаможка автомобиля из ОАЭ: доставка, пошлина и мощные модели",
+ "url":"https://rastamozhka-calc.github.io/oae/",
+ "inLanguage":"ru",
+ "isPartOf":{ "@type":"WebSite", "name":"Rastamozhka Calc", "url":"https://rastamozhka-calc.github.io/" }
+}
+</script>
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"FAQPage",
+ "mainEntity":[
+  {
+   "@type":"Question",
+   "name":"Правда, что в Дубае Land Cruiser заметно дешевле, чем в России",
+   "acceptedAnswer":{ "@type":"Answer", "text":"На месте - да, за счёт большого выбора и невысоких местных налогов цена на популярные внедорожники в ОАЭ часто ниже российской. Но у таких машин обычно большой объём двигателя и мощность, поэтому после пошлины и утилизационного сбора, который для мощных моторов считается по коммерческой шкале, разница в цене заметно сокращается - сравнивать стоит полную стоимость, а не только цену на месте." }
+  },
+  {
+   "@type":"Question",
+   "name":"Сколько занимает доставка автомобиля из ОАЭ в Россию",
+   "acceptedAnswer":{ "@type":"Answer", "text":"Морем контейнером до Новороссийска - около 30–45 дней, это быстрее, чем из США или Китая. Более дешёвый вариант - автовозом через Казахстан или паромом через Каспийское море - может занять дольше и менее предсказуем по срокам из-за нерегулярного расписания парома." }
+  }
+ ]
+}
+</script>
+
+</head>
+<body data-country-page="oae">
+
+<header class="header">
+  <div class="container header-row">
+    <a href="/" class="logo">Растаможка<span>·Calc</span></a>
+    <button type="button" class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="siteNav">
+      <span></span><span></span><span></span>
+      <span class="sr-only">Меню</span>
+    </button>
+    <nav id="siteNav" class="site-nav">
+      <ul>
+        <li><a href="#calculator">Калькулятор</a></li>
+        <li><a href="#specifics">Особенности ОАЭ</a></li>
+        <li><a href="#models">Модели</a></li>
+        <li><a href="#faq">Вопросы</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ============================= HERO ============================= -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-content">
+      <p class="eyebrow">Новые ставки 2026 года</p>
+      <h1>Расчет растаможка автомобиля из ОАЭ в Россию</h1>
+      <p class="hero-text">
+        Формула таможенных платежей для машины из ОАЭ ничем не отличается от расчёта для
+        любой другой страны. Особенность направления в другом: доставка морем занимает
+        около полутора месяцев, заметно быстрее, чем из США или Китая, а на местном рынке
+        много крупных внедорожников и мощных моторов. Именно мощность чаще всего оказывается
+        сюрпризом - привлекательная цена на месте не всегда остаётся такой же привлекательной
+        после расчёта утильсбора.
+      </p>
+      <ul class="hero-points">
+        <li>Расчёт в дирхамах - стандартной валюте на рынке ОАЭ</li>
+        <li>Отдельно предупреждает про лимит мощности для льготного утильсбора</li>
+        <li>Показывает, какая сумма от чего зависит</li>
+      </ul>
+      <a href="#calculator" class="button">Рассчитать</a>
+    </div>
+
+    <div class="hero-note" aria-hidden="true">
+      <p class="hero-note-label">Перед покупкой в Дубае</p>
+      <ol class="hero-note-list">
+        <li>Сверьте мощность двигателя с лимитом 160 л.с. для льготного утильсбора</li>
+        <li>Выберите маршрут доставки - контейнер дороже, но предсказуемее по срокам</li>
+        <li>Проверьте состояние резиновых и пластиковых деталей, тут сказывается жаркий климат</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= CALCULATOR ============================= -->
+<section id="calculator" class="calculator">
+  <div class="container">
+    <h2>Калькулятор растаможки авто из ОАЭ</h2>
+    <p class="section-lead">
+      Валюта по умолчанию - дирхам. Указывайте цену по договору купли-продажи, оформленному
+      после снятия автомобиля с учёта в RTA - дорожном управлении ОАЭ.
+    </p>
+
+    <div class="calc-shell">
+      <form id="calcForm" class="calc-form" autocomplete="off">
+
+        <fieldset class="field-group">
+          <legend>Кто оформляет ввоз</legend>
+          <div class="segmented" id="ownerSwitch">
+            <button type="button" class="seg-btn is-active" data-value="person">Физическое лицо</button>
+            <button type="button" class="seg-btn" data-value="company">Юридическое лицо / ИП</button>
+          </div>
+        </fieldset>
+
+        <div class="field-row" id="purposeRow">
+          <label class="checkbox-line">
+            <input type="checkbox" id="personalUse" checked>
+            <span>Ввожу для личного пользования, не на продажу</span>
+          </label>
+        </div>
+
+        <div class="form-grid">
+
+          <div class="field">
+            <label for="sourceCountry">Страна покупки</label>
+            <select id="sourceCountry">
+              <option value="china">Китай</option>
+              <option value="yaponiya">Япония</option>
+              <option value="koreya">Корея</option>
+              <option value="gruziya">Грузия</option>
+              <option value="kazakhstan">Казахстан</option>
+              <option value="kirgiziya">Киргизия</option>
+              <option value="germaniya">Германия</option>
+              <option value="usa">США</option>
+              <option value="armeniya">Армения</option>
+              <option value="mongoliya">Монголия</option>
+              <option value="uzbekistan">Узбекистан</option>
+              <option value="tadzhikistan">Таджикистан</option>
+              <option value="oae" selected>ОАЭ</option>
+              <option value="kyrgyzstan">Кыргызстан</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="currency">Валюта в договоре</label>
+            <select id="currency">
+              <option value="AED" selected>Дирхам, AED</option>
+              <option value="USD">Доллар, USD</option>
+              <option value="EUR">Евро, EUR</option>
+              <option value="CNY">Юань, CNY</option>
+              <option value="KRW">Вона, KRW</option>
+              <option value="JPY">Иена, JPY</option>
+              <option value="RUB">Рубль, RUB</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="carPrice">Стоимость автомобиля</label>
+            <input id="carPrice" type="number" inputmode="decimal" placeholder="Например, 90000" min="0">
+          </div>
+
+          <div class="field">
+            <label for="delivery">Доставка до границы РФ</label>
+            <input id="delivery" type="number" inputmode="decimal" placeholder="0" min="0">
+            <span class="field-hint">фрахт до Новороссийска или автовоз через Казахстан</span>
+          </div>
+
+          <div class="field">
+            <label for="rateToRub">Курс валюты договора к рублю</label>
+            <input id="rateToRub" type="number" step="0.01" inputmode="decimal">
+          </div>
+
+          <div class="field">
+            <label for="eurToRub">Курс евро к рублю</label>
+            <input id="eurToRub" type="number" step="0.01" inputmode="decimal" value="105">
+            <span class="field-hint">пошлина считается в евро - это влияет на итог</span>
+          </div>
+
+          <div class="field">
+            <label for="year">Год выпуска</label>
+            <input id="year" type="number" placeholder="2022" min="1980" max="2026">
+          </div>
+
+          <div class="field">
+            <label for="month">Месяц выпуска</label>
+            <select id="month">
+              <option value="1">Январь</option><option value="2">Февраль</option>
+              <option value="3">Март</option><option value="4">Апрель</option>
+              <option value="5">Май</option><option value="6">Июнь</option>
+              <option value="7">Июль</option><option value="8">Август</option>
+              <option value="9">Сентябрь</option><option value="10">Октябрь</option>
+              <option value="11">Ноябрь</option><option value="12" selected>Декабрь</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="fuel">Тип двигателя</label>
+            <select id="fuel">
+              <option value="petrol">Бензин</option>
+              <option value="diesel">Дизель</option>
+              <option value="hybrid">Гибрид</option>
+              <option value="electric">Электромобиль</option>
+            </select>
+          </div>
+
+          <div class="field" id="engineField">
+            <label for="engine">Объём двигателя, см³</label>
+            <input id="engine" type="number" placeholder="3500" min="0">
+          </div>
+
+          <div class="field">
+            <label for="power">Мощность, л.с.</label>
+            <input id="power" type="number" placeholder="310" min="0">
+          </div>
+
+        </div>
+
+        <div class="buttons">
+          <button type="button" id="calculate" class="button">Рассчитать растаможку</button>
+          <button type="reset" class="button-ghost">Очистить форму</button>
+        </div>
+      </form>
+
+      <div id="result" class="receipt">
+        <p class="receipt-placeholder">
+          Здесь появится расчёт с разбивкой по каждому платежу - как только вы заполните
+          стоимость автомобиля, год выпуска и объём двигателя.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================= SPECIFICS ============================= -->
+<section id="specifics" class="breakdown">
+  <div class="container">
+    <h2>Что в расчёте из ОАЭ стоит понимать заранее</h2>
+    <p class="section-lead">
+      Формулы пошлины, сбора и утильсбора едины для всех стран. Особенности здесь - в
+      логистике и в том, какие машины преобладают на местном рынке.
+    </p>
+
+    <div class="line-cards">
+      <article>
+        <span class="line-tag">01</span>
+        <h3>Быстрая доставка морем</h3>
+        <p>
+          Контейнером до Новороссийска машина обычно доходит примерно за 30–45 дней - заметно
+          быстрее, чем из США или Китая. Более дешёвый вариант - автовозом через Казахстан,
+          иногда с паромной переправой через Каспийское море, - может занять дольше и менее
+          предсказуем по срокам из-за нерегулярного расписания парома.
+        </p>
+      </article>
+      <article>
+        <span class="line-tag">02</span>
+        <h3>Большие моторы - обычное дело</h3>
+        <p>
+          Внедорожники и пикапы с объёмом двигателя 3,5 литра и больше на рынке ОАЭ - не
+          редкость, а норма. Мощность многих таких моделей превышает 160 л.с. - порог, после
+          которого утилизационный сбор считается по коммерческой ставке, а не по льготной.
+        </p>
+      </article>
+      <article>
+        <span class="line-tag">03</span>
+        <h3>Привлекательная цена на месте - не итоговая цена</h3>
+        <p>
+          Крупные внедорожники в Дубае нередко стоят заметно дешевле аналогичных машин в
+          российских салонах - сказываются масштаб рынка и невысокие местные налоги. Но после
+          пошлины и повышенного утильсбора для мощных моторов разница в цене может
+          сократиться сильнее, чем ожидалось, - сравнивать стоит полную сумму, а не только
+          цену объявления.
+        </p>
+      </article>
+      <article>
+        <span class="line-tag">04</span>
+        <h3>Оформление на месте - без банковских сложностей</h3>
+        <p>
+          В отличие от покупок в Евросоюзе, санкционных ограничений на такие сделки нет:
+          продавец снимает машину с учёта в RTA (местном дорожном управлении) и выдаёт
+          экспортный сертификат обычно в течение одного дня, без необходимости в
+          посреднике-резиденте для самой оплаты.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= MODELS ============================= -->
+<section id="models" class="countries">
+  <div class="container">
+    <h2>На что обратить внимание по моделям</h2>
+    <p class="section-lead">
+      Это не рейтинг марок, а ориентир по параметрам, которые стоит свериться перед тем, как
+      вводить данные в калькулятор.
+    </p>
+    <div class="country-grid">
+      <article>
+        <h3>Toyota Land Cruiser 300 и Lexus LX</h3>
+        <p>Самые узнаваемые модели рынка ОАЭ - версии с бензиновым V6 или V8 почти всегда
+        превышают лимит 160 л.с., рассчитывайте утильсбор по коммерческой шкале.</p>
+      </article>
+      <article>
+        <h3>Nissan Patrol</h3>
+        <p>Ещё один популярный крупный внедорожник с мощным мотором - та же логика с лимитом
+        по мощности применима и к нему.</p>
+      </article>
+      <article>
+        <h3>Американские пикапы и внедорожники</h3>
+        <p>Dodge, Cadillac Escalade, GMC и похожие модели тоже широко представлены в Дубае -
+        крупный объём двигателя почти гарантированно означает высокую ступень пошлины для
+        машин старше 3 лет.</p>
+      </article>
+      <article>
+        <h3>Компактные и дизельные версии</h3>
+        <p>Если важно остаться в рамках льготного утильсбора, стоит целенаправленно искать
+        версии с меньшей мощностью - они на рынке ОАЭ тоже есть, просто менее заметны на фоне
+        крупных внедорожников.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= FAQ ============================= -->
+<section id="faq" class="faq">
+  <div class="container">
+    <h2>Вопросы о растаможке авто из ОАЭ</h2>
+
+    <div class="faq-list">
+
+      <details>
+        <summary>Правда, что в Дубае Land Cruiser заметно дешевле, чем в России?</summary>
+        <p>
+          На месте - как правило, да, за счёт масштаба рынка и невысоких местных налогов.
+          Но у таких машин обычно большой объём двигателя и мощность выше 160 л.с., поэтому
+          утильсбор считается по коммерческой ставке - после всех платежей разница в цене
+          может оказаться заметно меньше, чем казалось на этапе выбора машины.
+        </p>
+      </details>
+
+      <details>
+        <summary>Сколько занимает доставка автомобиля из ОАЭ в Россию?</summary>
+        <p>
+          Морем контейнером до Новороссийска - около 30–45 дней. Более дешёвый вариант -
+          автовозом через Казахстан или паромом через Каспийское море - может занять дольше
+          и менее предсказуем по срокам из-за нерегулярного расписания парома.
+        </p>
+      </details>
+
+      <details>
+        <summary>Нужен ли посредник для покупки машины в ОАЭ?</summary>
+        <p>
+          Для самой сделки - обычно нет, банковских ограничений, характерных для Евросоюза,
+          здесь не действует. Посредник может понадобиться отдельно для таможенного
+          сопровождения при ввозе через Казахстан, если выбран такой маршрут доставки.
+        </p>
+      </details>
+
+      <details>
+        <summary>Как понять заранее, попадёт ли машина под коммерческий утильсбор?</summary>
+        <p>
+          Сверьте мощность двигателя в паспортных данных конкретной версии с лимитом
+          160 л.с. - если она выше, утильсбор будет считаться по коммерческой шкале, а не по
+          льготной ставке 3 400–5 200 рублей. Многие популярные модели из ОАЭ этот лимит
+          превышают.
+        </p>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <a href="/" class="logo">Растаможка<span>·Calc</span></a>
+      <p>Независимый калькулятор предварительной стоимости растаможки автомобиля в России.</p>
+    </div>
+    <div>
+      <h3>Растаможка по странам</h3>
+      <ul class="footer-countries">
+        <li><a href="/china/">Китай</a></li>
+        <li><a href="/yaponiya/">Япония</a></li>
+        <li><a href="/koreya/">Корея</a></li>
+        <li><a href="/gruziya/">Грузия</a></li>
+        <li><a href="/kazakhstan/">Казахстан</a></li>
+        <li><a href="/kirgiziya/">Киргизия</a></li>
+        <li><a href="/germaniya/">Германия</a></li>
+        <li><a href="/usa/">США</a></li>
+        <li><a href="/armeniya/">Армения</a></li>
+        <li><a href="/mongoliya/">Монголия</a></li>
+        <li><a href="/uzbekistan/">Узбекистан</a></li>
+        <li><a href="/tadzhikistan/">Таджикистан</a></li>
+        <li><a href="/oae/">ОАЭ</a></li>
+        <li><a href="/kyrgyzstan/">Кыргызстан</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Информация</h3>
+      <ul>
+        <li><a href="https://rastamozhka-calc.github.io/privacy/">Политика конфиденциальности</a></li>
+        <li><a href="https://rastamozhka-calc.github.io/about/">О проекте</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container copyright">
+    © 2026 Rastamozhka Calc. Расчёт носит справочный характер и не заменяет официальное
+    таможенное оформление.
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"BreadcrumbList",
+ "itemListElement":[
+   { "@type":"ListItem", "position":1, "name":"Главная", "item":"https://rastamozhka-calc.github.io/" },
+   { "@type":"ListItem", "position":2, "name":"ОАЭ", "item":"https://rastamozhka-calc.github.io/oae/" }
+ ]
+}
+</script>
+
+<script src="/script.js" defer></script>
+</body>
+</html>
