@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Калькулятор растаможки авто из Узбекистана в Россию</title>
+
+<meta name="description" content="Расчёт стоимости растаможки авто из Узбекистана: пошлина, таможенный сбор и утильсбор по ставкам 2026 года. Узбекистан не входит в ЕАЭС — только статус наблюдателя, поэтому доплат по льготным тарифам здесь нет.">
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<link rel="canonical" href="https://rastamozhka-calc.github.io/uzbekistan/">
+<meta name="theme-color" content="#12305c">
+<meta name="author" content="Rastamozhka Calc">
+<meta name="application-name" content="Rastamozhka Calc">
+<meta name="format-detection" content="telephone=no">
+<link rel="alternate" hreflang="ru" href="https://rastamozhka-calc.github.io/uzbekistan/">
+<link rel="alternate" hreflang="x-default" href="https://rastamozhka-calc.github.io/uzbekistan/">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="Калькулятор растаможки авто из Узбекистана в Россию">
+<meta property="og:description" content="Расчёт таможенных платежей при ввозе автомобиля из Узбекистана: пошлина, сбор и утильсбор, плюс объяснение того, почему местный рынок устроен иначе, чем в странах ЕАЭС.">
+<meta property="og:url" content="https://rastamozhka-calc.github.io/uzbekistan/">
+<meta property="og:site_name" content="Rastamozhka Calc">
+<meta property="og:image" content="https://rastamozhka-calc.github.io/img/cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Растаможка авто из Узбекистана — калькулятор 2026">
+<meta name="twitter:description" content="Расчёт таможенных платежей при ввозе автомобиля из Узбекистана по ставкам 2026 года.">
+<meta name="twitter:image" content="https://rastamozhka-calc.github.io/img/cover.jpg">
+
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/style.css">
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"WebPage",
+ "name":"Растаможка автомобиля из Узбекистана: рынок, устроенный иначе",
+ "url":"https://rastamozhka-calc.github.io/uzbekistan/",
+ "inLanguage":"ru",
+ "isPartOf":{ "@type":"WebSite", "name":"Rastamozhka Calc", "url":"https://rastamozhka-calc.github.io/" }
+}
+</script>
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"FAQPage",
+ "mainEntity":[
+  {
+   "@type":"Question",
+   "name":"Узбекистан входит в ЕАЭС",
+   "acceptedAnswer":{ "@type":"Answer", "text":"Нет. По состоянию на 2026 год Узбекистан имеет только статус государства-наблюдателя при ЕАЭС, а не полноправного члена союза. Это значит, что при ввозе автомобиля оттуда в Россию действуют стандартные правила для третьей страны — пошлина платится полностью, никакой схемы с доплатой разницы, как для Казахстана или Киргизии, здесь нет." }
+  },
+  {
+   "@type":"Question",
+   "name":"Почему на узбекском рынке в основном Chevrolet",
+   "acceptedAnswer":{ "@type":"Answer", "text":"В Узбекистане действует протекционистская политика в отношении собственного автопрома — завода UzAuto Motors в Асаке, выпускающего машины под маркой Chevrolet. Ввоз иностранных подержанных автомобилей в саму страну обложен очень высокими местными пошлинами, поэтому легально доступный на месте парк состоит в основном из машин местной сборки, а не из интернационального набора марок, как на рынках Грузии или Казахстана." }
+  }
+ ]
+}
+</script>
+
+</head>
+<body data-country-page="uzbekistan">
+
+<header class="header">
+  <div class="container header-row">
+    <a href="/" class="logo">Растаможка<span>·Calc</span></a>
+    <button type="button" class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="siteNav">
+      <span></span><span></span><span></span>
+      <span class="sr-only">Меню</span>
+    </button>
+    <nav id="siteNav" class="site-nav">
+      <ul>
+        <li><a href="#calculator">Калькулятор</a></li>
+        <li><a href="#specifics">Особенности Узбекистана</a></li>
+        <li><a href="#models">Модели</a></li>
+        <li><a href="#faq">Вопросы</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ============================= HERO ============================= -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-content">
+      <p class="eyebrow">Новые ставки 2026 года</p>
+      <h1>Растаможка автомобиля из Узбекистана: рынок, устроенный иначе</h1>
+      <p class="hero-text">
+        Узбекистан пока не входит в Евразийский экономический союз — у страны только статус
+        наблюдателя, а значит, никакой особой схемы с доплатой разницы тарифов, как для
+        Казахстана или Киргизии, здесь нет: пошлина считается полностью, по тем же правилам,
+        что и для машины из любой другой страны. Но сам рынок устроен своеобразно: из-за
+        высоких местных пошлин на иностранные подержанные машины он состоит в основном не из
+        интернационального набора марок, а из автомобилей местной сборки.
+      </p>
+      <ul class="hero-points">
+        <li>Расчёт в долларах, стандартной валюте сделки</li>
+        <li>Учитывает компактные двигатели, характерные для местных моделей</li>
+        <li>Показывает, какая сумма от чего зависит</li>
+      </ul>
+      <a href="#calculator" class="button">Рассчитать</a>
+    </div>
+
+    <div class="hero-note" aria-hidden="true">
+      <p class="hero-note-label">Перед покупкой в Узбекистане</p>
+      <ol class="hero-note-list">
+        <li>Уточните паспортный объём двигателя — у местных моделей он обычно небольшой</li>
+        <li>Учтите, что прямой границы с Россией нет — потребуется транзит</li>
+        <li>Не рассчитывайте на льготы ЕАЭС — Узбекистан в союз не входит</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= CALCULATOR ============================= -->
+<section id="calculator" class="calculator">
+  <div class="container">
+    <h2>Калькулятор растаможки авто из Узбекистана</h2>
+    <p class="section-lead">
+      Валюта по умолчанию — доллар. Расчёт стандартный: Узбекистан не в ЕАЭС, поэтому
+      специальных условий, зависящих от местного тарифа, здесь нет — сумма ниже и есть то,
+      что нужно будет заплатить.
+    </p>
+
+    <div class="calc-shell">
+      <form id="calcForm" class="calc-form" autocomplete="off">
+
+        <fieldset class="field-group">
+          <legend>Кто оформляет ввоз</legend>
+          <div class="segmented" id="ownerSwitch">
+            <button type="button" class="seg-btn is-active" data-value="person">Физическое лицо</button>
+            <button type="button" class="seg-btn" data-value="company">Юридическое лицо / ИП</button>
+          </div>
+        </fieldset>
+
+        <div class="field-row" id="purposeRow">
+          <label class="checkbox-line">
+            <input type="checkbox" id="personalUse" checked>
+            <span>Ввожу для личного пользования, не на продажу</span>
+          </label>
+        </div>
+
+        <div class="form-grid">
+
+          <div class="field">
+            <label for="sourceCountry">Страна покупки</label>
+            <select id="sourceCountry">
+              <option value="china">Китай</option>
+              <option value="yaponiya">Япония</option>
+              <option value="koreya">Корея</option>
+              <option value="gruziya">Грузия</option>
+              <option value="kazakhstan">Казахстан</option>
+              <option value="kirgiziya">Киргизия</option>
+              <option value="germaniya">Германия</option>
+              <option value="usa">США</option>
+              <option value="armeniya">Армения</option>
+              <option value="mongoliya">Монголия</option>
+              <option value="uzbekistan" selected>Узбекистан</option>
+              <option value="tadzhikistan">Таджикистан</option>
+              <option value="oae">ОАЭ</option>
+              <option value="kyrgyzstan">Кыргызстан</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="currency">Валюта в договоре</label>
+            <select id="currency">
+              <option value="USD" selected>Доллар, USD</option>
+              <option value="EUR">Евро, EUR</option>
+              <option value="CNY">Юань, CNY</option>
+              <option value="KRW">Вона, KRW</option>
+              <option value="JPY">Иена, JPY</option>
+              <option value="AED">Дирхам, AED</option>
+              <option value="RUB">Рубль, RUB</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="carPrice">Стоимость автомобиля</label>
+            <input id="carPrice" type="number" inputmode="decimal" placeholder="Например, 9000" min="0">
+          </div>
+
+          <div class="field">
+            <label for="delivery">Доставка до границы РФ</label>
+            <input id="delivery" type="number" inputmode="decimal" placeholder="0" min="0">
+            <span class="field-hint">включая транзит через сопредельную страну</span>
+          </div>
+
+          <div class="field">
+            <label for="rateToRub">Курс валюты договора к рублю</label>
+            <input id="rateToRub" type="number" step="0.01" inputmode="decimal">
+          </div>
+
+          <div class="field">
+            <label for="eurToRub">Курс евро к рублю</label>
+            <input id="eurToRub" type="number" step="0.01" inputmode="decimal" value="105">
+            <span class="field-hint">пошлина считается в евро — это влияет на итог</span>
+          </div>
+
+          <div class="field">
+            <label for="year">Год выпуска</label>
+            <input id="year" type="number" placeholder="2021" min="1980" max="2026">
+          </div>
+
+          <div class="field">
+            <label for="month">Месяц выпуска</label>
+            <select id="month">
+              <option value="1">Январь</option><option value="2">Февраль</option>
+              <option value="3">Март</option><option value="4">Апрель</option>
+              <option value="5">Май</option><option value="6">Июнь</option>
+              <option value="7">Июль</option><option value="8">Август</option>
+              <option value="9">Сентябрь</option><option value="10">Октябрь</option>
+              <option value="11">Ноябрь</option><option value="12" selected>Декабрь</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="fuel">Тип двигателя</label>
+            <select id="fuel">
+              <option value="petrol">Бензин</option>
+              <option value="diesel">Дизель</option>
+              <option value="hybrid">Гибрид</option>
+              <option value="electric">Электромобиль</option>
+            </select>
+          </div>
+
+          <div class="field" id="engineField">
+            <label for="engine">Объём двигателя, см³</label>
+            <input id="engine" type="number" placeholder="1500" min="0">
+          </div>
+
+          <div class="field">
+            <label for="power">Мощность, л.с.</label>
+            <input id="power" type="number" placeholder="107" min="0">
+          </div>
+
+        </div>
+
+        <div class="buttons">
+          <button type="button" id="calculate" class="button">Рассчитать растаможку</button>
+          <button type="reset" class="button-ghost">Очистить форму</button>
+        </div>
+      </form>
+
+      <div id="result" class="receipt">
+        <p class="receipt-placeholder">
+          Здесь появится расчёт с разбивкой по каждому платежу — как только вы заполните
+          стоимость автомобиля, год выпуска и объём двигателя.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================= SPECIFICS ============================= -->
+<section id="specifics" class="breakdown">
+  <div class="container">
+    <h2>Что в расчёте из Узбекистана стоит понимать заранее</h2>
+    <p class="section-lead">
+      Главное отличие этого направления — не в таможенной формуле, а в статусе страны и
+      в устройстве местного авторынка.
+    </p>
+
+    <div class="line-cards">
+      <article>
+        <span class="line-tag">01</span>
+        <h3>Узбекистан — не член ЕАЭС</h3>
+        <p>
+          У страны статус наблюдателя, а не полноправного участника союза. Это значит, что
+          вопрос «по какому тарифу растаможена машина на месте», актуальный для Казахстана,
+          Киргизии или Армении, здесь просто не возникает — пошлина в России платится
+          полностью и один раз, по стандартной формуле для третьей страны.
+        </p>
+      </article>
+      <article>
+        <span class="line-tag">02</span>
+        <h3>Локальный рынок защищён высокими пошлинами</h3>
+        <p>
+          Ввоз иностранных подержанных машин в сам Узбекистан обложен настолько высокими
+          местными пошлинами, что это фактически поддерживает конкурентоспособность
+          собственного завода. В результате на месте продаются в основном автомобили местной
+          сборки, а не пёстрый интернациональный набор марок.
+        </p>
+      </article>
+      <article>
+        <span class="line-tag">03</span>
+        <h3>Нет прямой границы с Россией</h3>
+        <p>
+          Доставка идёт транзитом — как правило, через территорию Казахстана. Сам по себе
+          транзит не меняет таможенный статус машины: растаможка всё равно происходит по
+          стандартным правилам при въезде в Россию, а не по льготным условиям Казахстана,
+          через который физически провозится автомобиль.
+        </p>
+      </article>
+      <article>
+        <span class="line-tag">04</span>
+        <h3>Небольшой объём двигателя — обычное дело</h3>
+        <p>
+          У большинства местных моделей объём двигателя не превышает 1,5–2 литра, что для
+          машин старше 3 лет обычно означает младшую ступень таблицы по объёму и,
+          соответственно, более скромную пошлину, чем у крупных внедорожников.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= MODELS ============================= -->
+<section id="models" class="countries">
+  <div class="container">
+    <h2>На что обратить внимание по моделям</h2>
+    <p class="section-lead">
+      Это не рейтинг марок, а ориентир по тому, какие машины реально доступны на месте и что
+      в них стоит сверить перед расчётом.
+    </p>
+    <div class="country-grid">
+      <article>
+        <h3>Chevrolet Cobalt и Nexia</h3>
+        <p>Самые массовые бюджетные седаны местной сборки — двигатель обычно около 1,5 литра,
+        предсказуемый и невысокий расчёт пошлины.</p>
+      </article>
+      <article>
+        <h3>Chevrolet Spark</h3>
+        <p>Компактный городской автомобиль с малым объёмом двигателя — попадает в младшую
+        ступень таблицы почти при любом возрасте.</p>
+      </article>
+      <article>
+        <h3>Chevrolet Tracker и Malibu</h3>
+        <p>Кроссовер и седан более крупного класса — объём двигателя уже ближе к 1,5–2 литрам,
+        стоит свериться с паспортными данными конкретной комплектации.</p>
+      </article>
+      <article>
+        <h3>Иностранные подержанные машины</h3>
+        <p>Встречаются на местном рынке редко и обычно стоят заметно дороже аналогов в других
+        странах — из-за высоких местных пошлин на их ввоз в сам Узбекистан.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= FAQ ============================= -->
+<section id="faq" class="faq">
+  <div class="container">
+    <h2>Вопросы о растаможке авто из Узбекистана</h2>
+
+    <div class="faq-list">
+
+      <details>
+        <summary>Узбекистан входит в ЕАЭС?</summary>
+        <p>
+          Нет, по состоянию на 2026 год у Узбекистана только статус наблюдателя при ЕАЭС.
+          Поэтому при ввозе автомобиля в Россию действуют стандартные правила для третьей
+          страны — без схем с доплатой разницы тарифа, которые актуальны для полноправных
+          членов союза.
+        </p>
+      </details>
+
+      <details>
+        <summary>Почему на узбекском рынке в основном Chevrolet?</summary>
+        <p>
+          В стране действует протекционистская политика в отношении собственного автопрома —
+          завода UzAuto Motors в Асаке. Ввоз иностранных подержанных машин обложен высокими
+          местными пошлинами, поэтому доступный на месте парк состоит в основном из машин
+          локальной сборки.
+        </p>
+      </details>
+
+      <details>
+        <summary>Как доставить машину, если у Узбекистана нет общей границы с Россией?</summary>
+        <p>
+          Обычно транзитом через территорию Казахстана. Сам транзит не меняет таможенный
+          статус автомобиля — растаможка происходит по стандартным правилам уже при въезде
+          в Россию.
+        </p>
+      </details>
+
+      <details>
+        <summary>Есть ли льготы, как для машин из Казахстана или Армении?</summary>
+        <p>
+          Нет. Такие схемы работают только для полноправных членов ЕАЭС. Узбекистан имеет
+          статус наблюдателя, поэтому пошлина при ввозе оттуда считается полностью, без
+          вариантов с частичной доплатой.
+        </p>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <a href="/" class="logo">Растаможка<span>·Calc</span></a>
+      <p>Независимый калькулятор предварительной стоимости растаможки автомобиля в России.</p>
+    </div>
+    <div>
+      <h3>Растаможка по странам</h3>
+      <ul class="footer-countries">
+        <li><a href="/china/">Китай</a></li>
+        <li><a href="/yaponiya/">Япония</a></li>
+        <li><a href="/koreya/">Корея</a></li>
+        <li><a href="/gruziya/">Грузия</a></li>
+        <li><a href="/kazakhstan/">Казахстан</a></li>
+        <li><a href="/kirgiziya/">Киргизия</a></li>
+        <li><a href="/germaniya/">Германия</a></li>
+        <li><a href="/usa/">США</a></li>
+        <li><a href="/armeniya/">Армения</a></li>
+        <li><a href="/mongoliya/">Монголия</a></li>
+        <li><a href="/uzbekistan/">Узбекистан</a></li>
+        <li><a href="/tadzhikistan/">Таджикистан</a></li>
+        <li><a href="/oae/">ОАЭ</a></li>
+        <li><a href="/kyrgyzstan/">Кыргызстан</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Информация</h3>
+      <ul>
+        <li><a href="https://rastamozhka-calc.github.io/privacy/">Политика конфиденциальности</a></li>
+        <li><a href="https://rastamozhka-calc.github.io/about/">О проекте</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container copyright">
+    © 2026 Rastamozhka Calc. Расчёт носит справочный характер и не заменяет официальное
+    таможенное оформление.
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"BreadcrumbList",
+ "itemListElement":[
+   { "@type":"ListItem", "position":1, "name":"Главная", "item":"https://rastamozhka-calc.github.io/" },
+   { "@type":"ListItem", "position":2, "name":"Узбекистан", "item":"https://rastamozhka-calc.github.io/uzbekistan/" }
+ ]
+}
+</script>
+
+<script src="/script.js" defer></script>
+</body>
+</html>
