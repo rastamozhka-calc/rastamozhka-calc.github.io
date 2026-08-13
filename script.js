@@ -44,8 +44,7 @@
         { value: "mongoliya",    slug: "mongoliya",     currency: "USD" },
         { value: "uzbekistan",   slug: "uzbekistan",    currency: "USD" },
         { value: "tadzhikistan", slug: "tadzhikistan",  currency: "USD" },
-        { value: "oae",          slug: "oae",           currency: "AED" },
-        { value: "kyrgyzstan",   slug: "kyrgyzstan",    currency: "USD" }
+        { value: "oae",          slug: "oae",           currency: "AED" }
     ];
 
     // Пошлина для физлиц, авто младше 3 лет: [макс. стоимость €, % от стоимости, минимум €/см³]
