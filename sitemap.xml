@@ -1,25 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<urlset 
-xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-
-<url>
-
-<loc>
-https://rastamozhka-calc.github.io/
-</loc>
-
-<changefreq>
-weekly
-</changefreq>
-
-<priority>
-1.0
-</priority>
-
-</url>
-
-
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- Главная страница -->
+    <url>
+        <loc>https://rastamozhka-calc.github.io/</loc>
+        <priority>1.0</priority>
+        <changefreq>weekly</changefreq>
+    </url>
+    
+    <!-- Внутренние страницы -->
+    <url>
+        <loc>https://rastamozhka-calc.github.io/china/</loc>
+        <priority>0.8</priority>
+        
+    </url>
+    <url>
+        <loc>https://rastamozhka-calc.github.io/yaponiya/</loc>
+        <priority>0.8</priority>
+        
+    </url>
+    <url>
+        <loc>https://rastamozhka-calc.github.io/koreya/</loc>
+        <priority>0.8</priority>
+        
+    </url>
+    <url>
+        <loc>https://rastamozhka-calc.github.io/gruziya/</loc>
+        <priority>0.8</priority>
+        
+    </url>
+    <url>
+        <loc>https://rastamozhka-calc.github.io/kazakhstan/</loc>
+        <priority>0.8</priority>
+        
+    </url>
+    <url>
+        <loc>https://rastamozhka-calc.github.io/kirgiziya/</loc>
+        <priority>0.8</priority>
+        
+    </url>
+    <url>
+        <loc>https://rastamozhka-calc.github.io/germaniya/</loc>
+        <priority>0.8</priority>
+        
+    </url>
+    <url>
+        <loc>https://rastamozhka-calc.github.io/usa/</loc>
+        <priority>0.8</priority>
+        
+    </url>
+    <url>
+        <loc>https://rastamozhka-calc.github.io/armeniya/</loc>
+        <priority>0.8</priority>
+        
+    </url>
+    <url>
+        <loc>https://rastamozhka-calc.github.io/mongoliya/</loc>
+        <priority>0.8</priority>
+        
+    </url>
+    <url>
+        <loc>https://rastamozhka-calc.github.io/uzbekistan/</loc>
+        <priority>0.8</priority>
+        
+    </url>
+    <url>
+        <loc>https://rastamozhka-calc.github.io/tadzhikistan/</loc>
+        <priority>0.8</priority>
+        
+    </url>
+    <url>
+        <loc>https://rastamozhka-calc.github.io/oae/</loc>
+        <priority>0.8</priority>
+        
+    </url>
 </urlset>
