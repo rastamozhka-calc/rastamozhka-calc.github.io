@@ -477,17 +477,15 @@ clickmap:true,
 trackLinks:true,
 accurateTrackBounce:true
 });
+
 (function () {
     const desktopImage = 'https://raw.githubusercontent.com/rastamozhka-calc/rastamozhka-calc.github.io/refs/heads/main/pcproverka.png';
     const mobileImage = 'https://raw.githubusercontent.com/rastamozhka-calc/rastamozhka-calc.github.io/refs/heads/main/mobproverka.png';
     const adLink = 'https://fas.st/jzE29?erid=MvGzQC98w3Z1gMq1owUvbWhJ';
 
     function initAdBanner() {
-        // Не создаём баннер повторно
         if (document.getElementById('custom-ad-banner')) return;
-
         const isMobile = window.matchMedia('(max-width: 767px)').matches;
-
         const style = document.createElement('style');
         style.textContent = `
             #custom-ad-banner {
@@ -509,9 +507,10 @@ accurateTrackBounce:true
                 border: 0;
             }
 
+            /* Кнопка закрытия */
             #ad-banner-close {
                 position: absolute;
-                top: 0;
+                top: -24px;
                 right: 0;
                 width: 60px;
                 height: 24px;
@@ -538,8 +537,6 @@ accurateTrackBounce:true
                     max-width: calc(100vw - 40px);
                 }
             }
-
-            /* Мобильный floor banner */
             @media (max-width: 767px) {
                 #custom-ad-banner {
                     left: 0;
@@ -550,22 +547,19 @@ accurateTrackBounce:true
                 }
             }
         `;
-        document.head.appendChild(style);
 
+        document.head.appendChild(style);
         const banner = document.createElement('div');
         banner.id = 'custom-ad-banner';
-
         const link = document.createElement('a');
         link.href = adLink;
         link.target = '_blank';
-        link.rel = 'noopener noreferrer';
-        link.setAttribute('aria-label', 'проверка авто');
-
+        link.rel = 'noopener noreferrer sponsored';
+        link.setAttribute('aria-label', 'Реклама');
         const image = document.createElement('img');
         image.src = isMobile ? mobileImage : desktopImage;
-        image.alt = 'проверка авто';
-        image.loading = 'lazy';
-
+        image.alt = 'Реклама';
+        image.loading = 'eager';
         const closeButton = document.createElement('button');
         closeButton.id = 'ad-banner-close';
         closeButton.type = 'button';
@@ -580,23 +574,24 @@ accurateTrackBounce:true
                       fill="#575C66"/>
             </svg>
         `;
-
         closeButton.addEventListener('click', function (event) {
             event.preventDefault();
             event.stopPropagation();
             banner.remove();
         });
-
         link.appendChild(image);
         banner.appendChild(link);
         banner.appendChild(closeButton);
 
         document.body.appendChild(banner);
     }
+    function startAdBanner() {
+        setTimeout(initAdBanner, 5000);
+    }
 
     if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initAdBanner);
+        document.addEventListener('DOMContentLoaded', startAdBanner);
     } else {
-        initAdBanner();
+        startAdBanner();
     }
 })();
