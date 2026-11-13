@@ -477,3 +477,126 @@ clickmap:true,
 trackLinks:true,
 accurateTrackBounce:true
 });
+(function () {
+    const desktopImage = 'https://raw.githubusercontent.com/rastamozhka-calc/rastamozhka-calc.github.io/refs/heads/main/pcproverka.png';
+    const mobileImage = 'https://raw.githubusercontent.com/rastamozhka-calc/rastamozhka-calc.github.io/refs/heads/main/mobproverka.png';
+    const adLink = 'https://fas.st/jzE29?erid=MvGzQC98w3Z1gMq1owUvbWhJ';
+
+    function initAdBanner() {
+        // Не создаём баннер повторно
+        if (document.getElementById('custom-ad-banner')) return;
+
+        const isMobile = window.matchMedia('(max-width: 767px)').matches;
+
+        const style = document.createElement('style');
+        style.textContent = `
+            #custom-ad-banner {
+                position: fixed;
+                z-index: 999999;
+                box-sizing: border-box;
+                line-height: 0;
+            }
+
+            #custom-ad-banner a {
+                display: block;
+                line-height: 0;
+            }
+
+            #custom-ad-banner img {
+                display: block;
+                width: 100%;
+                height: auto;
+                border: 0;
+            }
+
+            #ad-banner-close {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 60px;
+                height: 24px;
+                padding: 0;
+                margin: 0;
+                border: 0;
+                background: transparent;
+                cursor: pointer;
+                z-index: 2;
+            }
+
+            #ad-banner-close svg {
+                display: block;
+                width: 60px;
+                height: 24px;
+            }
+
+            /* Баннер для ПК */
+            @media (min-width: 768px) {
+                #custom-ad-banner {
+                    right: 20px;
+                    bottom: 20px;
+                    width: 460px;
+                    max-width: calc(100vw - 40px);
+                }
+            }
+
+            /* Мобильный floor banner */
+            @media (max-width: 767px) {
+                #custom-ad-banner {
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    width: 100%;
+                    max-width: 100%;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        const banner = document.createElement('div');
+        banner.id = 'custom-ad-banner';
+
+        const link = document.createElement('a');
+        link.href = adLink;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        link.setAttribute('aria-label', 'проверка авто');
+
+        const image = document.createElement('img');
+        image.src = isMobile ? mobileImage : desktopImage;
+        image.alt = 'проверка авто';
+        image.loading = 'lazy';
+
+        const closeButton = document.createElement('button');
+        closeButton.id = 'ad-banner-close';
+        closeButton.type = 'button';
+        closeButton.setAttribute('aria-label', 'Закрыть рекламу');
+
+        closeButton.innerHTML = `
+            <svg width="60" height="24" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.485 6.06A8 8 0 0118.246 0h23.508a8 8 0 017.76 6.06l3.728 14.91A4 4 0 0057.123 24H60 0h2.877a4 4 0 003.88-3.03l3.728-14.91z"
+                      fill="#D1D6E0"/>
+                <path d="M24.793 6.793a1 1 0 000 1.414L28.586 12l-3.793 3.793a1 1 0 001.414 1.414L30 13.414l3.793 3.793a1 1 0 001.414-1.414L31.414 12l3.793-3.793a1 1 0 00-1.414-1.414L30 10.586l-3.793-3.793a1 1 0 00-1.414 0z"
+                      fill="#575C66"/>
+            </svg>
+        `;
+
+        closeButton.addEventListener('click', function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+            banner.remove();
+        });
+
+        link.appendChild(image);
+        banner.appendChild(link);
+        banner.appendChild(closeButton);
+
+        document.body.appendChild(banner);
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initAdBanner);
+    } else {
+        initAdBanner();
+    }
+})();
